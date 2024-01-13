@@ -17,6 +17,7 @@ public class InputManager : MonoBehaviour
 
     private InputAction interactTapAction;
     private InputAction interactHoldAction;
+    private List<Interactable> _interactableList;
 
     private void Awake()
     {
@@ -52,6 +53,7 @@ public class InputManager : MonoBehaviour
     }
 
     #region Event Subscription
+    
     private void OnEnable()
     {
         moveAction.performed += OnMovePerformed;
@@ -59,7 +61,20 @@ public class InputManager : MonoBehaviour
         
         interactTapAction.performed += OnInteractTapPerformed;
         interactHoldAction.performed += OnInteractHoldPerformed;
+
+
     }
+
+    private void OnDisable()
+    {
+        moveAction.performed -= OnMovePerformed;
+        moveAction.canceled -= OnMoveCanceled;
+
+        interactTapAction.performed -= OnInteractTapPerformed;
+        interactHoldAction.performed -= OnInteractHoldPerformed;
+    }
+
+    #endregion
     private void OnMovePerformed(InputAction.CallbackContext obj)
     {
         Debug.Log("Move Performed");
@@ -72,24 +87,42 @@ public class InputManager : MonoBehaviour
         inputEvent = Vector2.zero;
     }
 
+    private void OnInteractTapPerformed(InputAction.CallbackContext obj)
+    {
+        
+        if (_interactableList.Count > 0)
+        {
+            //Vector2 closestDistance;
+            //Vector2 playerPosition = _characterController.transform.position;
+            //foreach (var item in _interactableList)
+            //    if (closestDistance.magnitude < ((new Vector2(item.transform.position.x, item.transform.position.y) - playerPosition).magnitude)
+            //        return;
+        }
+        Debug.Log("Interact Tap Performed");
+    }
 
     private void OnInteractHoldPerformed(InputAction.CallbackContext obj)
     {
         Debug.Log("Interact Hold Performed");
     }
 
-    private void OnInteractTapPerformed(InputAction.CallbackContext obj)
-    {
-        Debug.Log("Interact Tap Performed");
-    }
 
-    private void OnDisable()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        moveAction.performed -= OnMovePerformed;
-        moveAction.canceled -= OnMoveCanceled;
+        if (collision.GetComponent<Interactable>() != null)
+        {
+            _interactableList.Add(collision.GetComponent<Interactable>());
+            Debug.Log(collision.name + "added");
 
-        interactTapAction.performed -= OnInteractTapPerformed;
-        interactHoldAction.performed -= OnInteractHoldPerformed;
+        }
     }
-    #endregion
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.GetComponent<Interactable>() != null)
+        {
+            if(_interactableList.Contains(collision.GetComponent<Interactable>()))
+                _interactableList.Remove(collision.GetComponent<Interactable>());
+            Debug.Log(collision.name + "removed");
+        }
+    }
 }
