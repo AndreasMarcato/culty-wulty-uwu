@@ -41,3 +41,30 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Sky
+    uniqueID: 857764919
+    locked: 0
+  - name: Background
+    uniqueID: 1536634159
+    locked: 0
+  - name: SemiBackgroundHouses
+    uniqueID: 2409925705
+    locked: 0
+  - name: Houses
+    uniqueID: 781585879
+    locked: 0
+  - name: Street
+    uniqueID: 2336517401
+    locked: 0
+  - name: Game
+    uniqueID: 30005229
+    locked: 0
+  - name: Foreground decor
+    uniqueID: 650074253
+    locked: 0
+  - name: Foreground
+    uniqueID: 1585360995
+    locked: 0
+  - name: Water
+    uniqueID: 1497757511
+    locked: 0
