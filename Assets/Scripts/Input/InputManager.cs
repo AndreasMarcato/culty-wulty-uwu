@@ -7,7 +7,7 @@ public class InputManager : MonoBehaviour
 {
 
     private PlayerInput _playerInput;
-    private CharacterController _characterController;
+    private Transform _playerTransform;
     
     // Game Input
     private InputAction moveAction;
@@ -17,12 +17,13 @@ public class InputManager : MonoBehaviour
 
     private InputAction interactTapAction;
     private InputAction interactHoldAction;
-    private List<Interactable> _interactableList;
+    
 
     private void Awake()
     {
         //Cursor.lockState = CursorLockMode.Locked;
-        
+
+        _playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         _playerInput = GetComponent<PlayerInput>();
         moveAction = _playerInput.actions["Move"];
         interactTapAction = _playerInput.actions["InteractTap"];
@@ -41,12 +42,12 @@ public class InputManager : MonoBehaviour
         //Movement
        
         move = new Vector2 (inputEvent.x, 0f).normalized;
-        if (_characterController != null )
+        if (_playerTransform != null )
         {
-            _characterController.Move((move * playerVelocity) * Time.deltaTime);
+            _playerTransform.Translate((move * playerVelocity) * Time.deltaTime);
         }
         else
-            _characterController = GameObject.FindFirstObjectByType<CharacterController>();
+            _playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 
 
 
@@ -90,13 +91,9 @@ public class InputManager : MonoBehaviour
     private void OnInteractTapPerformed(InputAction.CallbackContext obj)
     {
         
-        if (_interactableList.Count > 0)
+        if (GameManager.Instance._interactableList.Count > 0)
         {
-            //Vector2 closestDistance;
-            //Vector2 playerPosition = _characterController.transform.position;
-            //foreach (var item in _interactableList)
-            //    if (closestDistance.magnitude < ((new Vector2(item.transform.position.x, item.transform.position.y) - playerPosition).magnitude)
-            //        return;
+            GameManager.Instance._interactableList[0].GetComponent<Interactable>().Interact();
         }
         Debug.Log("Interact Tap Performed");
     }
@@ -106,22 +103,5 @@ public class InputManager : MonoBehaviour
         Debug.Log("Interact Hold Performed");
     }
 
-    public void On2DTriggerEnter(Interactable interactable)
-    {
-        if (interactable != null)
-        {
-            _interactableList.Add(interactable);
-            Debug.Log(interactable.name + "added");
-
-        }
-    }
-    public void On2DTriggerExit(Interactable interactable)
-    {
-        if (interactable != null)
-        {
-            if (_interactableList.Contains(interactable))
-                _interactableList.Remove(interactable);
-            Debug.Log(interactable.name + "removed");
-        }
-    }
+    
 }
