@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 97942450b17605b459dcbff42cd3fc6c
+guid: 927bb42a13e121d4faf76a5a66aebdff
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -121,91 +121,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: RatRun_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 15a5bc2c961c9004aa95ee95a6961290
-      internalID: 1016741148
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RatRun_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c582f4aff6b6a9849ada2aaffc0ad814
-      internalID: -968244807
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RatRun_2
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7dbe09b61c6e88a49bcfc001a40acca5
-      internalID: 1624599189
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RatRun_3
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: be1c890c1644b1443a4cee945edab192
-      internalID: 864251764
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -216,11 +132,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      RatRun_0: 1016741148
-      RatRun_1: -968244807
-      RatRun_2: 1624599189
-      RatRun_3: 864251764
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

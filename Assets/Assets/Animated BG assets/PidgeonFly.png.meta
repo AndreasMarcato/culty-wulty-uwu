@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9cdfd544e0244af4fbf5d63dc9975d3b
+guid: 4ff0e797194196542b26aaf2e99b4a7f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Rat idle_0
+      name: PidgeonFly_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 16
+        width: 33
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d8b72728d7d1f1449a62077fd99450b
-      internalID: 382376782
+      spriteID: 569d877a4f450254ca68d8ba2effcefe
+      internalID: 1216377915
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rat idle_1
+      name: PidgeonFly_1
       rect:
         serializedVersion: 2
-        x: 16
+        x: 33
         y: 0
-        width: 16
-        height: 16
+        width: 33
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39beca32e06377d47a10ce82311de17f
-      internalID: -1170332279
+      spriteID: 9c3cb25b2bdff7b4fbdfeafb37293df7
+      internalID: -1381792409
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rat idle_2
+      name: PidgeonFly_2
       rect:
         serializedVersion: 2
-        x: 32
+        x: 66
         y: 0
-        width: 16
-        height: 16
+        width: 30
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,92 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a5796f317c846447920e0f5bb33aa76
-      internalID: -1569621472
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Rat idle_3
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9eec7ad869ad4924bbf7273b8be06d64
-      internalID: -227300460
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Rat idle_4
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8c8f2f6d3c99a1744a5e19a1757fce5a
-      internalID: -178932840
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Rat idle_5
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7f9f460476f414e43bf35160d1c8e4d3
-      internalID: 843602462
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Rat idle_6
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f90b81b46f8f31c4dbd6354eb3d42216
-      internalID: -2017008809
+      spriteID: 5b858432c0d559742ba3564ecc3f39a9
+      internalID: -698589469
       vertices: []
       indices: 
       edges: []
@@ -280,13 +196,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Rat idle_0: 382376782
-      Rat idle_1: -1170332279
-      Rat idle_2: -1569621472
-      Rat idle_3: -227300460
-      Rat idle_4: -178932840
-      Rat idle_5: 843602462
-      Rat idle_6: -2017008809
+      PidgeonFly_0: 1216377915
+      PidgeonFly_1: -1381792409
+      PidgeonFly_2: -698589469
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

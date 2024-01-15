@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9cdfd544e0244af4fbf5d63dc9975d3b
+guid: 2841d8bf978915a4bac0fd4c646089e3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -44,11 +44,11 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 1
+  spriteExtrude: 0
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Rat idle_0
+      name: DrunkSleep_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 16
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,41 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d8b72728d7d1f1449a62077fd99450b
-      internalID: 382376782
+      spriteID: ef2b99889bc247b46a56092828668617
+      internalID: 679224435
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rat idle_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 39beca32e06377d47a10ce82311de17f
-      internalID: -1170332279
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Rat idle_2
+      name: DrunkSleep_1
       rect:
         serializedVersion: 2
         x: 32
         y: 0
-        width: 16
-        height: 16
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,41 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a5796f317c846447920e0f5bb33aa76
-      internalID: -1569621472
+      spriteID: 097e724a50de5d245ac73421e193dba9
+      internalID: -229522182
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rat idle_3
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9eec7ad869ad4924bbf7273b8be06d64
-      internalID: -227300460
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Rat idle_4
+      name: DrunkSleep_2
       rect:
         serializedVersion: 2
         x: 64
         y: 0
-        width: 16
-        height: 16
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,41 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c8f2f6d3c99a1744a5e19a1757fce5a
-      internalID: -178932840
+      spriteID: e62d0e0c09880894c93392c1ae206e65
+      internalID: 1468698944
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rat idle_5
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7f9f460476f414e43bf35160d1c8e4d3
-      internalID: 843602462
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Rat idle_6
+      name: DrunkSleep_3
       rect:
         serializedVersion: 2
         x: 96
         y: 0
-        width: 16
-        height: 16
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -263,8 +200,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f90b81b46f8f31c4dbd6354eb3d42216
-      internalID: -2017008809
+      spriteID: 775830dcc9fd1d44793af9d9456e3083
+      internalID: -1964539560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DrunkSleep_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e04398c2030a84748a30701f3518c007
+      internalID: -2108077955
       vertices: []
       indices: 
       edges: []
@@ -280,13 +238,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Rat idle_0: 382376782
-      Rat idle_1: -1170332279
-      Rat idle_2: -1569621472
-      Rat idle_3: -227300460
-      Rat idle_4: -178932840
-      Rat idle_5: 843602462
-      Rat idle_6: -2017008809
+      DrunkSleep_0: 679224435
+      DrunkSleep_1: 2045346835
+      DrunkSleep_2: -229522182
+      DrunkSleep_3: 1468698944
+      DrunkSleep_4: -1964539560
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
