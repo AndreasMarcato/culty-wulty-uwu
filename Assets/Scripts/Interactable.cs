@@ -4,6 +4,24 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour, IEInteractable
 {
+    public string interactibleName;
+    public string interactibleDescription;
+    public enum ObjectType
+    {
+        Fire,
+        Ice,
+        Light,
+        Dark
+    }
+    public ObjectType CurrentType;
+
+
+    public enum InteractableType
+    {
+        OBJECT,
+        PERSON
+    }
+    public InteractableType type;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +36,41 @@ public class Interactable : MonoBehaviour, IEInteractable
     
     public void Interact()
     {
+        switch (type)
+        {
+            case InteractableType.OBJECT:
+                Debug.Log("Object type");
+                ObjectInteraction(CurrentType);
+                return;
+            case InteractableType.PERSON:
+                GameManager.Instance.HandlePersonInteractionScene();
+                Debug.Log("Person type");
+                return;
+        }
+
         Debug.Log("Interated with " + gameObject.name);
     }
+
+
+    private void ObjectInteraction(ObjectType t)
+    {
+        switch (t)
+        {
+            case ObjectType.Fire:
+                {
+                    //DoFireStuff
+                }
+                break;
+            case ObjectType.Ice:
+                {
+                    //DoIceStuff
+                }
+
+            return;
+
+        }
+        return;
+    }
+
 
 }
