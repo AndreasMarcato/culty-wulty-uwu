@@ -106,23 +106,22 @@ public class InputManager : MonoBehaviour
         Debug.Log("Interact Hold Performed");
     }
 
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void On2DTriggerEnter(Interactable interactable)
     {
-        if (collision.GetComponent<Interactable>() != null)
+        if (interactable != null)
         {
-            _interactableList.Add(collision.GetComponent<Interactable>());
-            Debug.Log(collision.name + "added");
+            _interactableList.Add(interactable);
+            Debug.Log(interactable.name + "added");
 
         }
     }
-    private void OnTriggerExit2D(Collider2D collision)
+    public void On2DTriggerExit(Interactable interactable)
     {
-        if (collision.GetComponent<Interactable>() != null)
+        if (interactable != null)
         {
-            if(_interactableList.Contains(collision.GetComponent<Interactable>()))
-                _interactableList.Remove(collision.GetComponent<Interactable>());
-            Debug.Log(collision.name + "removed");
+            if (_interactableList.Contains(interactable))
+                _interactableList.Remove(interactable);
+            Debug.Log(interactable.name + "removed");
         }
     }
 }
