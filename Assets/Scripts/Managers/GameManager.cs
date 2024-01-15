@@ -37,13 +37,25 @@ public class GameManager : MonoBehaviour
 
     public void HandlePersonInteractionScene()
     {
-        playerInput.actions.FindActionMap("PlayerInputOOC").Disable();
-        playerInput.actions.FindActionMap("PlayerInputIC").Enable();
+        SwapActionMap();
 
         SceneManager.LoadScene(_sceneDialogue.name, LoadSceneMode.Additive);
-        SceneManager.UnloadSceneAsync(1, UnloadSceneOptions.UnloadAllEmbeddedSceneObjects);
+        //Scene active = SceneManager.GetActiveScene();
+        //SceneManager.UnloadSceneAsync(active, UnloadSceneOptions.UnloadAllEmbeddedSceneObjects);
         return;
     }
 
-
+    private void SwapActionMap()
+    {
+        if (playerInput.actions.FindActionMap("PlayerInputOOC").enabled)
+        {
+            playerInput.actions.FindActionMap("PlayerInputOOC").Disable();
+            playerInput.actions.FindActionMap("PlayerInputIC").Enable();
+        }
+        else
+        {
+            playerInput.actions.FindActionMap("PlayerInputOOC").Enable();
+            playerInput.actions.FindActionMap("PlayerInputIC").Disable();
+        }
+    }
 }
