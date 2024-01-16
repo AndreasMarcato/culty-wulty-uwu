@@ -42,6 +42,7 @@ public class Interactable : MonoBehaviour, IEInteractable
                 Debug.Log("Object type");
                 GameManager.Instance.Inventory.Add(gameObject);
                 gameObject.SetActive(false);
+                Invoke("Reposition", 60f);
                 return;
             case InteractableType.PERSON:
                 GameManager.Instance.HandlePersonInteractionScene();
@@ -73,5 +74,10 @@ public class Interactable : MonoBehaviour, IEInteractable
         return;
     }
 
+    private void Reposition()
+    {
+        transform.position = new Vector3(Random.Range(-30, 30), transform.position.y, transform.position.z);
+        gameObject.SetActive(true);
+    }
 
 }
