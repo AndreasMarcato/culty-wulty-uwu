@@ -40,7 +40,8 @@ public class Interactable : MonoBehaviour, IEInteractable
         {
             case InteractableType.OBJECT:
                 Debug.Log("Object type");
-                ObjectInteraction(CurrentType);
+                GameManager.Instance.Inventory.Add(gameObject);
+                gameObject.SetActive(false);
                 return;
             case InteractableType.PERSON:
                 GameManager.Instance.HandlePersonInteractionScene();
