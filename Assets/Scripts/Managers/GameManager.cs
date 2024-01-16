@@ -10,6 +10,11 @@ public class GameManager : MonoBehaviour
     //Interactible trackers
     public List<Collider2D> _interactableList;
 
+    //Player Inventory
+    private List<GameObject> inventory { get;  set; } = new List<GameObject>();
+    public List<GameObject> Inventory => inventory;
+    
+
     public SceneAsset _sceneDialogue;
 
     [SerializeField] private PlayerInput playerInput;
@@ -57,5 +62,15 @@ public class GameManager : MonoBehaviour
             playerInput.actions.FindActionMap("PlayerInputOOC").Enable();
             playerInput.actions.FindActionMap("PlayerInputIC").Disable();
         }
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.G))
+            inventory.RemoveAt(0);
+        if (Input.GetKeyDown(KeyCode.H))
+            Instantiate(inventory[1]);
+
+        Debug.Log(inventory.Count);
     }
 }
