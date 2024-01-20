@@ -8,6 +8,7 @@ public class InputManager : MonoBehaviour
 
     private PlayerInput _playerInput;
     private Transform _playerTransform;
+    private PlayerVisual _playerVisual;
     
     // Game Input
     private InputAction moveAction;
@@ -33,7 +34,7 @@ public class InputManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        _playerVisual = _playerTransform.GetComponentInChildren<PlayerVisual>();
     }
 
     // Update is called once per frame
@@ -80,12 +81,25 @@ public class InputManager : MonoBehaviour
     {
         Debug.Log("Move Performed");
         inputEvent = moveAction.ReadValue<Vector2>();
+         _playerVisual.StartWalking();
+        if (inputEvent.x > 0)
+        {
+            _playerVisual.transform.localScale = new Vector3(Mathf.Abs(_playerVisual.transform.localScale.x), _playerVisual.transform.localScale.y, _playerVisual.transform.localScale.z);
+        }
+        else
+        {
+            _playerVisual.transform.localScale = new Vector3(-Mathf.Abs(_playerVisual.transform.localScale.x), _playerVisual.transform.localScale.y, _playerVisual.transform.localScale.z);
+        }
+
+
     }
 
     private void OnMoveCanceled(InputAction.CallbackContext obj)
     {
         Debug.Log("Move Canceled");
         inputEvent = Vector2.zero;
+        _playerVisual.StopWalking();
+
     }
 
     private void OnInteractTapPerformed(InputAction.CallbackContext obj)
@@ -94,6 +108,11 @@ public class InputManager : MonoBehaviour
         if (GameManager.Instance._interactableList.Count > 0)
         {
             GameManager.Instance._interactableList[0].GetComponent<Interactable>().Interact();
+            Transform tra = GameManager.Instance._interactableList[0].transform;
+            if (tra.position.x < _playerTransform.position.x)
+                tra.transform.localScale = new Vector3(-Mathf.Abs(tra.transform.localScale.x), tra.transform.localScale.y, tra.transform.localScale.z);
+            else
+                tra.transform.localScale = new Vector3(Mathf.Abs(tra.transform.localScale.x), tra.transform.localScale.y, tra.transform.localScale.z);
         }
         Debug.Log("Interact Tap Performed");
     }
