@@ -40,8 +40,9 @@ public class GameManager : MonoBehaviour
     }
 
 
-    public void HandlePersonInteractionScene()
+    public void HandlePersonInteractionScene(GameObject obj)
     {
+        obj.GetComponent<NpcLogic>().isTalkking = true;
         SwapActionMap();
 
         SceneManager.LoadScene(_sceneDialogue.name, LoadSceneMode.Additive);

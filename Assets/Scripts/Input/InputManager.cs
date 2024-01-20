@@ -94,6 +94,11 @@ public class InputManager : MonoBehaviour
         if (GameManager.Instance._interactableList.Count > 0)
         {
             GameManager.Instance._interactableList[0].GetComponent<Interactable>().Interact();
+            Transform tra = GameManager.Instance._interactableList[0].transform;
+            if (tra.position.x < _playerTransform.position.x)
+                tra.transform.localScale = new Vector3(-Mathf.Abs(tra.transform.localScale.x), tra.transform.localScale.y, tra.transform.localScale.z);
+            else
+                tra.transform.localScale = new Vector3(Mathf.Abs(tra.transform.localScale.x), tra.transform.localScale.y, tra.transform.localScale.z);
         }
         Debug.Log("Interact Tap Performed");
     }
