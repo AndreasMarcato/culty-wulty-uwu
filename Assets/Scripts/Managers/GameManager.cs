@@ -15,9 +15,13 @@ public class GameManager : MonoBehaviour
     public List<GameObject> Inventory => inventory;
     
 
-    public SceneAsset _sceneDialogue;
 
-    [SerializeField] private PlayerInput playerInput;
+    [SerializeField] private PlayerInput _playerInput;
+
+
+    //"in combat" stuff
+    NpcLogic npcLogic;
+
 
     public static GameManager Instance { get; private set; }
     private void Awake()
@@ -36,33 +40,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        playerInput = GameObject.FindFirstObjectByType<PlayerInput>();
-    }
-
-
-    public void HandlePersonInteractionScene(GameObject obj)
-    {
-        obj.GetComponent<NpcLogic>().isTalkking = true;
-        SwapActionMap();
-
-        SceneManager.LoadScene(_sceneDialogue.name, LoadSceneMode.Additive);
-        //Scene active = SceneManager.GetActiveScene();
-        //SceneManager.UnloadSceneAsync(active, UnloadSceneOptions.UnloadAllEmbeddedSceneObjects);
-        return;
-    }
-
-    private void SwapActionMap()
-    {
-        if (playerInput.actions.FindActionMap("PlayerInputOOC").enabled)
-        {
-            playerInput.actions.FindActionMap("PlayerInputOOC").Disable();
-            playerInput.actions.FindActionMap("PlayerInputIC").Enable();
-        }
-        else
-        {
-            playerInput.actions.FindActionMap("PlayerInputOOC").Enable();
-            playerInput.actions.FindActionMap("PlayerInputIC").Disable();
-        }
+        //get player input reference
+        _playerInput = GameObject.FindFirstObjectByType<PlayerInput>();
     }
 
     private void Update()
@@ -73,5 +52,37 @@ public class GameManager : MonoBehaviour
             Instantiate(inventory[1]);
 
         Debug.Log(inventory.Count);
+    }
+
+
+
+
+    public void HandlePersonInteractionScene(GameObject npcReference)
+    {
+        //reference and boolean change
+        npcLogic = npcReference.GetComponent<NpcLogic>();
+        npcLogic.isTalking = true;
+
+        //disable action map for input
+        SwapActionMap();
+
+        //Scene active = SceneManager.GetActiveScene();
+        //SceneManager.UnloadSceneAsync(active, UnloadSceneOptions.UnloadAllEmbeddedSceneObjects);
+        return;
+    }
+ 
+
+    private void SwapActionMap()
+    {
+        if (_playerInput.actions.FindActionMap("PlayerInputOOC").enabled)
+        {
+            _playerInput.actions.FindActionMap("PlayerInputOOC").Disable();
+            _playerInput.actions.FindActionMap("PlayerInputIC").Enable();
+        }
+        else
+        {
+            _playerInput.actions.FindActionMap("PlayerInputOOC").Enable();
+            _playerInput.actions.FindActionMap("PlayerInputIC").Disable();
+        }
     }
 }

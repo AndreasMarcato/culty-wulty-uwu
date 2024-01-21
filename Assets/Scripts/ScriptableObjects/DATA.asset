@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 508e05a38666e9d4aaf3433658f837a5, type: 3}
+  m_Name: DATA
+  m_EditorClassIdentifier: 
+  personNameData:
+  - Bob
+  - Margaret
+  - Jerry
+  - Bobby
+  - Pippin
+  - Edgar
+  personSadDialogueOnInteractData:
+  - w
+  - e
+  personSadDialogueResponseYesData:
+  - q
+  - e
+  personSadDialogueResponseNoData:
+  - w
+  - e
+  personNeutralDialogueOnInteractData:
+  - qw
+  - ew
+  personNeutralDialogueResponseYesData:
+  - ewr
+  - werwe
+  personNeutralDialogueResponseNoData:
+  - werwerwer
+  - ewrwerwer
+  personBossDialogueOnInteractData:
+  - erwerwer
+  - ewrwerwerwerwerw
+  personBossDialogueResponseYesData:
+  - rewewrrwerew
+  - rewrew
+  personBossDialogueResponseNoData:
+  - rewrew
+  - qewqewewqew
+  personDialogueFailData:
+  - eqewewqeqw
+  - wqeewewq
+  personDialogueSucceedData:
+  - wqeeqwewq
+  - eewrewrew
+  personHealthData: 0f000000f1050000b3a72f00
