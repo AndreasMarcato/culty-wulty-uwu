@@ -217,7 +217,7 @@ GameObject:
   - component: {fileID: 8598441502087577230}
   m_Layer: 5
   m_Name: Person_Image
-  m_TagString: Untagged
+  m_TagString: PersonImage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -724,7 +724,7 @@ GameObject:
   - component: {fileID: 8530601611806551626}
   m_Layer: 5
   m_Name: Text_Diaologue_Line
-  m_TagString: Untagged
+  m_TagString: DialogueText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -867,7 +867,7 @@ GameObject:
   - component: {fileID: 7063952098224628562}
   m_Layer: 5
   m_Name: Player_Image
-  m_TagString: Untagged
+  m_TagString: PlayerImage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1331,7 +1331,7 @@ GameObject:
   - component: {fileID: 148906079665733274}
   m_Layer: 5
   m_Name: Text_Person-Name
-  m_TagString: Untagged
+  m_TagString: PersonName
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

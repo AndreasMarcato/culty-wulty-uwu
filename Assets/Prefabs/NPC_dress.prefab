@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 1306717620158150448}
   - component: {fileID: 2620432429529526334}
   - component: {fileID: 4639708633287022322}
+  - component: {fileID: 3768129252118912623}
   m_Layer: 0
   m_Name: NPC_dress
   m_TagString: Untagged
@@ -166,7 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87025a47cd1786c42a15a84b3511cd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTalkking: 0
+  isTalking: 0
   horizontalMovementSpeed: 3
   moveHorizontal: {x: 0, y: 0}
 --- !u!114 &2620432429529526334
@@ -230,3 +231,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7566176, y: 0.45240638}
   m_EdgeRadius: 0
+--- !u!114 &3768129252118912623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7744901857386880405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76b42e643ef01194083a8bb9c3bfd5a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  personDATA: {fileID: 11400000, guid: 03333727be96ed24c8018f868bec8210, type: 2}
+  personType: 0

@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -1630357214, guid: d911ccc4569f6184a9bfd1847366ae92, type: 3}
+    - target: {fileID: 3768129252118912623, guid: 51991641c19ee1640a3167e4f29ccd9b, type: 3}
+      propertyPath: personType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7744901857386880405, guid: 51991641c19ee1640a3167e4f29ccd9b, type: 3}
       propertyPath: m_Name
       value: NPC_Variant_Hooded

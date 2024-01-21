@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class NpcLogic : MonoBehaviour
 {
-    public bool isTalkking = false;
+    public bool isTalking = false;
     private NpcVisual _visuals;
     [SerializeField] float horizontalMovementSpeed = 3;
     [SerializeField] Vector2 moveHorizontal;
@@ -18,7 +18,7 @@ public class NpcLogic : MonoBehaviour
 
     public void WalkCycle()
     {
-        if (!isTalkking)
+        if (!isTalking)
         {
 
 
@@ -35,7 +35,7 @@ public class NpcLogic : MonoBehaviour
                     int isWalkingRight = Random.Range(0, 2);
 
                     _visuals.StartWalking();
-                    if (!isTalkking)
+                    if (!isTalking)
                     {
                         float randomSpeedMultiplier = Random.Range(1, 1.8f);
                         if (isWalkingRight == 0)
@@ -62,7 +62,7 @@ public class NpcLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isTalkking)
+        if (isTalking)
         {
             moveHorizontal = Vector2.zero;
             _visuals.StopWalking();
