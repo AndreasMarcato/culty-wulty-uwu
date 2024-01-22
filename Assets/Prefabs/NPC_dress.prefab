@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isTalking: 0
-  horizontalMovementSpeed: 3
+  horizontalMovementSpeed: 0.8
   moveHorizontal: {x: 0, y: 0}
 --- !u!114 &2620432429529526334
 MonoBehaviour:
@@ -244,4 +244,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   personDATA: {fileID: 11400000, guid: 03333727be96ed24c8018f868bec8210, type: 2}
-  personType: 0
+  personType: 1

@@ -20,32 +20,70 @@ MonoBehaviour:
   - Pippin
   - Edgar
   personSadDialogueOnInteractData:
-  - w
-  - e
+  - Fair day traveler. I am sorry if I seem down, but my closest friend and dearest
+    drinking partner hath left this world. I do not know what to do with myself.
+  - Alas, kind stranger, could thou help me a bit. I need someone to talk to for
+    my dearest wife hath passed away recently.
+  - 'Sad day, kind stranger. My workshop recently burned down. No longer can I support
+    myself, let alone my 3 children and wife. '
+  - Alas, kind stranger, could thou help me a bit. I need someone to talk to for
+    my dearest husband hath passed away recently.
+  - Sad day, kind stranger. My workshop recently burned down. No longer can I support
+    myself, let alone my 3 children and husband.
+  - "Alas, Good soul. My youngest hath come down with miasma and the witch\u2019s
+    herbs are not helping like they first did. Worried sick, I am that my youngest
+    shall not see the winter."
+  - "Greetings, stranger. It\u2019s been tough times. The harvest was taken by the
+    miasma and now the whole town\u2019s stomachs are growling. What doth thou reckon
+    we do?"
+  - 'I miss my wife. '
+  - 'I miss my mother. '
+  - I miss my father.
+  - 'I miss my husband. '
   personSadDialogueResponseYesData:
-  - q
-  - e
+  - Perhaps some new friends could help lighten the can recent events.
   personSadDialogueResponseNoData:
-  - w
-  - e
+  - Wait a moment now. Joining a group of friends sounded like a fine idea, but if
+    there be any talk of cultish business, I'm not joining for I've got enough burdens
+    to bear without adding mysterious gatherings to the mix.
   personNeutralDialogueOnInteractData:
-  - qw
-  - ew
+  - Hark, stranger. A plague lurks in the walls around us. How dos   thou cope when
+    death looms over us?
+  - Salutations, kind stranger. How dost thou manage in these hungry days?
+  - "Hail, kind stranger. Have thou heard the news that the church doesn\u2019t have
+    a connection with God. The word is they worship an idol and have been lead stray.
+    What are your thoughts friend?"
+  - "Hail, neighbor. The tax collector\u2019s shadow is looming above us and my bag
+    has nothing but crumbs. How do thou fair under this heavy burden?"
+  - Greetings. Has thou heard? The neighboring town hath been stuck by illness. What
+    shall we do when the wind brings the putrid miasma filled air to us? Will we
+    all finally die?
+  - ' Salutations dear friend. Excuse my sadness but my children have     left me
+    and moved to faraway lands. I miss them dearly. '
   personNeutralDialogueResponseYesData:
-  - ewr
-  - werwe
+  - ' Well, now, that''s a pleasant turn of events. I reckon I wouldn''t mind joining
+    a group of friends for a chat by a drink. A bit of camaraderie might sprinkle
+    some warmth into these grey days of mine. '
+  - ' Hold on just a moment. Are we talking about a friendly gathering, or is there
+    more to this fellowship than meets the eye? I''ve got no want for getting tangled
+    up in any sort of peculiar business.  '
   personNeutralDialogueResponseNoData:
   - werwerwer
   - ewrwerwer
   personBossDialogueOnInteractData:
-  - erwerwer
+  - Greetings child, How does the lord shine upon thee in these troubled times?
   - ewrwerwerwerwerw
   personBossDialogueResponseYesData:
-  - rewewrrwerew
-  - rewrew
+  - "By the heavens above! A miracle unfolds before mine eyes. The hand of the Almighty
+    is evident in thy deeds, and I stand in awe. Surely, this manifestation of divine
+    power is a sign\u2014a sign that the path thou treadest, though unconventional,
+    may hold the favor of the divine. I shall reflect upon this extraordinary occurrence
+    and seek guidance from the Almighty."
   personBossDialogueResponseNoData:
-  - rewrew
-  - qewqewewqew
+  - By the heavens, thou speakest madness! To stray into the arms of false gods is
+    to invite damnation upon thy soul. The righteous anger of the Almighty burns
+    within me. Repent, lest the flames of divine fury consume thee and thy misguided
+    allegiance!"
   personDialogueFailData:
   - eqewewqeqw
   - wqeewewq
