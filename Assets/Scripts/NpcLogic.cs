@@ -13,6 +13,8 @@ public class NpcLogic : MonoBehaviour
     void Start()
     {
         _visuals = gameObject.GetComponentInChildren<NpcVisual>();
+        if (_visuals == null)
+            _visuals = GetComponent<NpcVisual>();
         InvokeRepeating("WalkCycle", 1, 2);
     }
 

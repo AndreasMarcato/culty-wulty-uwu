@@ -18,8 +18,9 @@ public class InputManager : MonoBehaviour
 
     private InputAction interactTapAction;
     private InputAction interactHoldAction;
-    
 
+    //limit area of movement
+    private BoxCollider2D boundingBox;
     private void Awake()
     {
         //Cursor.lockState = CursorLockMode.Locked;
@@ -35,6 +36,11 @@ public class InputManager : MonoBehaviour
     void Start()
     {
         _playerVisual = _playerTransform.GetComponentInChildren<PlayerVisual>();
+        
+        // Get the BoxCollider2D component attached to this game object
+        boundingBox = GameObject.FindGameObjectWithTag("BoundingBox").GetComponent<BoxCollider2D>();
+        if (boundingBox == null)
+            Debug.LogError("BoxCollider2D not found on this game object!");
     }
 
     // Update is called once per frame
@@ -50,7 +56,7 @@ public class InputManager : MonoBehaviour
         else
             _playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 
-
+        ClampToBounds();
 
     }
 
@@ -122,5 +128,25 @@ public class InputManager : MonoBehaviour
         Debug.Log("Interact Hold Performed");
     }
 
-    
+    void ClampToBounds()
+    {
+        if (boundingBox != null)
+        {
+            // Get the position of the game object
+            Vector3 newPosition = _playerTransform.position;
+
+            // Calculate the bounds of the box collider
+            float minX = boundingBox.bounds.min.x;
+            float maxX = boundingBox.bounds.max.x;
+            float minY = boundingBox.bounds.min.y;
+            float maxY = boundingBox.bounds.max.y;
+
+            // Clamp the position to stay within the bounding box
+            newPosition.x = Mathf.Clamp(newPosition.x, minX, maxX);
+            newPosition.y = Mathf.Clamp(newPosition.y, minY, maxY);
+
+            // Update the position of the game object
+            _playerTransform.position = newPosition;
+        }
+    }
 }

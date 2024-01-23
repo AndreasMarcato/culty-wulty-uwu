@@ -6,12 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/S_Base.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 38544f9d8f6351e4d81f06354e8f273c
   - enabled: 1
     path: Assets/Scenes/S_City.unity
     guid: d23aab06aa2a3414c94ca74a14773d26
+  - enabled: 1
+    path: Assets/DevIza-Scene.unity
+    guid: c169e8c12169ce848ad061b07b2867a8
   m_configObjects: {}

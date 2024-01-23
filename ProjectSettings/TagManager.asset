@@ -8,6 +8,7 @@ TagManager:
   - PersonImage
   - PersonName
   - DialogueText
+  - BoundingBox
   layers:
   - Default
   - TransparentFX
