@@ -45,6 +45,7 @@ public class Person : MonoBehaviour
             case PersonType.SAD:
                 indexRandom = Random.Range(0, personDATA.personSadDialogueOnInteractData.Length);
                 personDialogueOnInteract = personDATA.personSadDialogueOnInteractData[indexRandom];
+                UIManager.Instance.SetUpActionOptions(personType, indexRandom);
                 break;
             case PersonType.NEUTRAL:
                 indexRandom = Random.Range(0, personDATA.personNeutralDialogueOnInteractData.Length);
