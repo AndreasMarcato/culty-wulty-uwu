@@ -7,6 +7,7 @@ using TMPro;
 [CreateAssetMenu(fileName = "Person DATA", menuName = "Assets/SO/Person")]
 public class PersonDATA : ScriptableObject
 {
+    //Person Interactable
     public string[] personNameData;
 
     public string[] personSadDialogueOnInteractData;
@@ -26,5 +27,12 @@ public class PersonDATA : ScriptableObject
 
 
     public int[] personHealthData;
+
+    //Player Dialogues
+    public string[] playerSadResponse;
+    public string[] playerNeutralResponse;
+    public string[] playerBossResponse;
+
+    public string[] playerMagicResponse;
 
 }

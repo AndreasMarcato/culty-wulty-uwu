@@ -45,7 +45,8 @@ public class Interactable : MonoBehaviour, IEInteractable
                 return;
             case InteractableType.PERSON:
                 GameManager.Instance.HandlePersonInteractionScene(gameObject);
-                UIManager.Instance.SetUp(this.gameObject);
+                Person reference = this.gameObject.GetComponent<Person>();
+                UIManager.Instance.SetUp(this.gameObject, reference.personType, reference.StoredIndex);
                 Debug.Log("Person type");
                 return;
         }
