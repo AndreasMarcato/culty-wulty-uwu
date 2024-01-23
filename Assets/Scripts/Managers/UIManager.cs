@@ -40,7 +40,7 @@ public class UIManager : MonoBehaviour
     }
 
 
-    public void SetUp(GameObject npcData)
+    public void SetUp(GameObject npcData, Person.PersonType type, int storedIndex)
     {
         //get basic stuff
         currentNPC = npcData;
@@ -50,6 +50,7 @@ public class UIManager : MonoBehaviour
         //get the data to put on screen
         npcName.text = person.PersonName;
         npcDialogueIntro.text = person.PersonDialogueOnInteract;
+        SetUpActionOptions(type, storedIndex);
         sceneDialogue.SetActive(true);
 
     }
@@ -62,39 +63,45 @@ public class UIManager : MonoBehaviour
     public void HideActionPanel() => ActionsPanelGO.SetActive(false);
     public void SetUpActionOptions(Person.PersonType personType, int index)
     {
-
-        switch(personType)
+        string s1 = "0";
+        string s2 = "0";
+        
+     
+        switch (personType)
         {
             case Person.PersonType.SAD:
                 //VS SAD PERSON ACTIONS
-                switch (index)
-                {
-                    case 0:
-                        string s1 = DATA_REFERENCE.playerSadResponse[0];
-                        break;
-                    case 1:
-                        break;
-                    case 2:
-                        break;
-                    case 3:
-                        break;
-                    case 4:
-                        break;
-                }
+                s1 = DATA_REFERENCE.playerSadResponse[0];
+                s2 = DATA_REFERENCE.playerNeutralResponse[Random.Range(0, DATA_REFERENCE.personNeutralDialogueOnInteractData.Length-1)];
                 break;
             case Person.PersonType.NEUTRAL:
                 //VS SAD NEUTRAL ACTIONS
+                s1 = DATA_REFERENCE.playerNeutralResponse[0];
+                s2 = DATA_REFERENCE.playerSadResponse[Random.Range(0, DATA_REFERENCE.personSadDialogueOnInteractData.Length-1)];
                 break;
             case Person.PersonType.BOSS:
                 //VS SAD BOSS ACTIONS
+                s1 = DATA_REFERENCE.playerBossResponse[0];
+                s2 = DATA_REFERENCE.playerNeutralResponse[Random.Range(0, DATA_REFERENCE.personNeutralDialogueOnInteractData.Length)];
                 break;
         }
+        RandomizerPosition(s1, s2);
     }
 
-    private void RandomizerPosition()
+    private void RandomizerPosition(string s1, string s2)
     {
         int randomizerPosition = Random.Range(0, 2);
-
+        if (randomizerPosition == 0)
+        {
+            option1.text = s1;
+            option2.text = s2;
+        }
+        else
+        {
+            option1.text = s2;
+            option2.text = s1;
+        }
+        
     }
 
 

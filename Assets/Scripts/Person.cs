@@ -21,6 +21,10 @@ public class Person : MonoBehaviour
     public string PersonDialogueResponseYes => personDialogueResponseYes;
     public int PersonHealth => personHealth;
 
+
+
+    private int storedIndex;
+    public int StoredIndex => storedIndex;
     
     public enum PersonType
     {
@@ -45,15 +49,18 @@ public class Person : MonoBehaviour
             case PersonType.SAD:
                 indexRandom = Random.Range(0, personDATA.personSadDialogueOnInteractData.Length);
                 personDialogueOnInteract = personDATA.personSadDialogueOnInteractData[indexRandom];
-                UIManager.Instance.SetUpActionOptions(personType, indexRandom);
+                storedIndex = indexRandom;
                 break;
             case PersonType.NEUTRAL:
                 indexRandom = Random.Range(0, personDATA.personNeutralDialogueOnInteractData.Length);
                 personDialogueOnInteract = personDATA.personNeutralDialogueOnInteractData[indexRandom];
+                storedIndex = indexRandom;
+
                 break;
             case PersonType.BOSS:
                 indexRandom = Random.Range(0, personDATA.personBossDialogueOnInteractData.Length);
                 personDialogueOnInteract = personDATA.personBossDialogueOnInteractData[indexRandom];
+                storedIndex = indexRandom;
                 break;
         }
         return personDialogueOnInteract;

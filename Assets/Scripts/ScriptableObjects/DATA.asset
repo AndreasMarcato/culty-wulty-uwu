@@ -91,3 +91,27 @@ MonoBehaviour:
   - wqeeqwewq
   - eewrewrew
   personHealthData: 0f000000f1050000b3a72f00
+  playerSadResponse:
+  - a
+  - b
+  - c
+  - d
+  - e
+  - f
+  - g
+  - h
+  - i
+  - j
+  playerNeutralResponse:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  playerBossResponse:
+  - 
+  - 
+  playerMagicResponse:
+  - 
+  - 
+  - 
