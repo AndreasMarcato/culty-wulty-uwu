@@ -213,6 +213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 724966c6cecac4847aaf2badf686fcf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneDialogue: {fileID: 0}
   npcName: {fileID: 0}
   npcDialogueIntro: {fileID: 0}
   npcDialogueSucces: {fileID: 0}
@@ -498,7 +499,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interactableList: []
-  _sceneDialogue: {fileID: 0}
   _playerInput: {fileID: 0}
 --- !u!1 &8204426960593050622
 GameObject:
