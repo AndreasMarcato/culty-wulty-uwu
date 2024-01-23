@@ -213,6 +213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 724966c6cecac4847aaf2badf686fcf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneDialogue: {fileID: 0}
   npcName: {fileID: 0}
   npcDialogueIntro: {fileID: 0}
   npcDialogueSucces: {fileID: 0}
@@ -260,9 +261,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6d61256e6bdb064380752e0cf62198e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxNumberNPCOnScreen: 20
+  prefabsNPC:
+  - {fileID: 7744901857386880405, guid: 51991641c19ee1640a3167e4f29ccd9b, type: 3}
+  - {fileID: 6187265678746356443, guid: 1dab41abb29eb0e4195e29feb2427a68, type: 3}
+  - {fileID: 7534094830144624941, guid: 8f93b7f40e6098842bc90442e02ec88a, type: 3}
   prefabSpawnerPlace: []
-  prefabsNPC: []
+  maxNumberNPCOnScreen: 5
+  currentNpcOnScreen: 0
+  spawnIntervalCheck: 5
 --- !u!1 &5570247448393775128
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,7 +504,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interactableList: []
-  _sceneDialogue: {fileID: 0}
   _playerInput: {fileID: 0}
 --- !u!1 &8204426960593050622
 GameObject:

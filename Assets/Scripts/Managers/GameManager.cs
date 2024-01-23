@@ -22,6 +22,9 @@ public class GameManager : MonoBehaviour
     //"in combat" stuff
     NpcLogic npcLogic;
 
+    //player fail condition
+    private int failCount;
+    public int FailCount => failCount;
 
     public static GameManager Instance { get; private set; }
     private void Awake()
@@ -52,9 +55,17 @@ public class GameManager : MonoBehaviour
             Instantiate(inventory[1]);
 
         Debug.Log(inventory.Count);
+
+        //Check Loss Condition
+        if (failCount == 5)
+            StartLosingState();
+
     }
 
-
+    private void StartLosingState()
+    {
+        //losing state
+    }
 
 
     public void HandlePersonInteractionScene(GameObject npcReference)

@@ -8,11 +8,12 @@ public class UIManager : MonoBehaviour
     public static UIManager Instance { get; private set; }
     [SerializeField, Header("DialogueCanvas")] private GameObject sceneDialogue;
     private GameObject currentNPC;
+    private int personHealthReference;
     private Person person;
     [Header("TMP Text")]
     [SerializeField] private TextMeshProUGUI npcName;
     [SerializeField] private TextMeshProUGUI npcDialogueIntro;
-    [SerializeField] private TextMeshProUGUI npcDialogueSucces;
+    //[SerializeField] private TextMeshProUGUI npcDialogueSucces;
 
     private void Awake()
     {
@@ -34,6 +35,7 @@ public class UIManager : MonoBehaviour
     {
         //get basic stuff
         currentNPC = npcData;
+        personHealthReference = npcData.GetComponent<Person>().PersonHealth;
         person = npcData.GetComponent<Person>();
 
         //get the data to put on screen
@@ -43,5 +45,9 @@ public class UIManager : MonoBehaviour
 
     }
 
+    public void HealthUpdate(int damage)
+    {
+        personHealthReference = personHealthReference - damage;
+    }
 
 }
