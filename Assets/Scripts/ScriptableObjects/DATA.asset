@@ -13,19 +13,26 @@ MonoBehaviour:
   m_Name: DATA
   m_EditorClassIdentifier: 
   personNameData:
-  - Bob
+  - Bartholomew
   - Margaret
-  - Jerry
-  - Bobby
-  - Pippin
-  - Edgar
+  - Beatrice
+  - Bonafemina
+  - Dadbert
+  - Dominic
+  - Gospatric
+  - Humbert
+  - Jaelle
+  - Quintius
+  - Reinhilde
+  - Vuteria
+  - ' Wirich'
+  - Ysoria
+  - ' Michael'
   personSadDialogueOnInteractData:
   - Fair day traveler. I am sorry if I seem down, but my closest friend and dearest
     drinking partner hath left this world. I do not know what to do with myself.
   - Alas, kind stranger, could thou help me a bit. I need someone to talk to for
     my dearest wife hath passed away recently.
-  - 'Sad day, kind stranger. My workshop recently burned down. No longer can I support
-    myself, let alone my 3 children and wife. '
   - Alas, kind stranger, could thou help me a bit. I need someone to talk to for
     my dearest husband hath passed away recently.
   - Sad day, kind stranger. My workshop recently burned down. No longer can I support
@@ -41,13 +48,15 @@ MonoBehaviour:
   - I miss my father.
   - 'I miss my husband. '
   personSadDialogueResponseYesData:
-  - Perhaps some new friends could help lighten the can recent events.
+  - Perhaps some new friends could help lighten these recent events.
+  - A miracle! Perhaps god hath chosen thou as the true leader.
   personSadDialogueResponseNoData:
   - Wait a moment now. Joining a group of friends sounded like a fine idea, but if
     there be any talk of cultish business, I'm not joining for I've got enough burdens
     to bear without adding mysterious gatherings to the mix.
+  - Witchcraft, take thy magic away from here. I have enough trouble on my own
   personNeutralDialogueOnInteractData:
-  - Hark, stranger. A plague lurks in the walls around us. How dos   thou cope when
+  - Hark, stranger. A plague lurks in the walls around us. How dos thou cope when
     death looms over us?
   - Salutations, kind stranger. How dost thou manage in these hungry days?
   - "Hail, kind stranger. Have thou heard the news that the church doesn\u2019t have
@@ -58,21 +67,20 @@ MonoBehaviour:
   - Greetings. Has thou heard? The neighboring town hath been stuck by illness. What
     shall we do when the wind brings the putrid miasma filled air to us? Will we
     all finally die?
-  - ' Salutations dear friend. Excuse my sadness but my children have     left me
-    and moved to faraway lands. I miss them dearly. '
+  - 'Salutations dear friend. Excuse my sadness but my children have left me and
+    moved to faraway lands. I miss them dearly. '
   personNeutralDialogueResponseYesData:
-  - ' Well, now, that''s a pleasant turn of events. I reckon I wouldn''t mind joining
+  - 'Well, now, that''s a pleasant turn of events. I reckon I wouldn''t mind joining
     a group of friends for a chat by a drink. A bit of camaraderie might sprinkle
     some warmth into these grey days of mine. '
+  - A miracle! Perhaps god hath chosen thou as the true leader.
+  personNeutralDialogueResponseNoData:
   - ' Hold on just a moment. Are we talking about a friendly gathering, or is there
     more to this fellowship than meets the eye? I''ve got no want for getting tangled
     up in any sort of peculiar business.  '
-  personNeutralDialogueResponseNoData:
-  - werwerwer
-  - ewrwerwer
+  - Witchcraft, take thy magic away from here. I have enough trouble on my own
   personBossDialogueOnInteractData:
   - Greetings child, How does the lord shine upon thee in these troubled times?
-  - ewrwerwerwerwerw
   personBossDialogueResponseYesData:
   - "By the heavens above! A miracle unfolds before mine eyes. The hand of the Almighty
     is evident in thy deeds, and I stand in awe. Surely, this manifestation of divine
@@ -80,38 +88,59 @@ MonoBehaviour:
     may hold the favor of the divine. I shall reflect upon this extraordinary occurrence
     and seek guidance from the Almighty."
   personBossDialogueResponseNoData:
-  - By the heavens, thou speakest madness! To stray into the arms of false gods is
-    to invite damnation upon thy soul. The righteous anger of the Almighty burns
-    within me. Repent, lest the flames of divine fury consume thee and thy misguided
-    allegiance!"
-  personDialogueFailData:
-  - eqewewqeqw
-  - wqeewewq
-  personDialogueSucceedData:
-  - wqeeqwewq
-  - eewrewrew
-  personHealthData: 0f000000f1050000b3a72f00
+  - By the heavens, thou are taken over by madness! To stray into the arms of false
+    gods is to invite damnation upon thy soul. The righteous anger of the Almighty
+    burns within me. Repent, lest the flames of divine fury consume thee and thy
+    misguided allegiance!"
+  personHealthData: 0a0000003200000064000000
   playerSadResponse:
-  - a
-  - b
-  - c
-  - d
-  - e
-  - f
-  - g
-  - h
-  - i
-  - j
+  - Condolences dear friend. Losing a life can be tough times. Perhaps joining our
+    comradeship would help thou fill the emptiness thou may feel.
+  - God told me to tell thou they are waiting for thou. I can help talk to them if
+    thou trust me.
+  - God told me to tell thou they are waiting for thou. I can help talk to them if
+    thou trust me.
+  - 'Our city could not live without your contributions. Join our fellowship so we
+    can celebrate your accomplishments and with the help of our savior return your
+    workshop to its former glory. '
+  - Our gathering may offer just what thou may need. Join us and we may guide thou
+    through your toughest battles.
+  - I have spoken to the true God and Thou have maketh me a promise for a bountiful
+    harvest for those who worship the true one.
+  - Condolences dear friend. Losing a life can be tough times. Perhaps joining our
+    comradeship would help thou fill the emptiness thou may feel.
+  - My sympathies. Losing your life can be challenging at the moment. Perhaps joining
+    our comradeship would help thou find love elsewhere.
+  - "I feel for you friend, it\u2019s a hard thing coping with the family leaving
+    our lives. Maybe talking can help thou through your troubled times."
+  - My sympathies. Losing your life can be challenging at the moment. Perhaps joining
+    our comradeship would help thou find love elsewhere.
   playerNeutralResponse:
-  - 1
-  - 2
-  - 3
-  - 4
-  - 5
+  - 'Not well my friend, but I have many to talk to. I get through these hard times
+    with love and laughter. Thou could join us one day if thou wanted to. '
+  - I have spoken to the true God and Thou have maketh me a promise for a bountiful
+    harvest for those who worship the true one.
+  - Thou are correct my friend. I have spoken with the true God and he showed me
+    the heathenous acts the false church commits. Join me so I may lead thou to the
+    right path.
+  - These tough times are best with a fellowship. With love from our savior and from
+    each other, tough times mean nothing to us.
+  - I have spoken with God and their word states anyone who follows the True One
+    shall be spared from the plague.
+  - Our crew hath a fair few who have gone through the same as thou has. If thou
+    mood is low, stop by and have a drink on us.
   playerBossResponse:
-  - 
-  - 
+  - You follow false gods. Your words poison the townsfolk and the air with your
+    false faith
+  - You god is a fruad. You follow nothing beyond the stench of gold. Turn to me
+    if you want to be redeemed
+  - Your words spread miasma throughout the lands. Your heathenous god strays the
+    people from the true path
   playerMagicResponse:
-  - 
-  - 
-  - 
+  - '*You perform a small trick with cards*'
+  - '*You use some slight of hand to pull a Disaronno from behind their ears*'
+  - '*You pull a seemingly endless number of handkerchiefs from you mouth*'
+  - "*You sneakily pour some water on a nearby drunk \u201Craising them from the
+    dead\u201D *"
+  - '*You channel the power of your god and perform a true miracle, the symbol of
+    you God appears in their mind*'
