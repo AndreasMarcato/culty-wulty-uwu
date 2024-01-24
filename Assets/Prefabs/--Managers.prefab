@@ -216,7 +216,11 @@ MonoBehaviour:
   sceneDialogue: {fileID: 0}
   npcName: {fileID: 0}
   npcDialogueIntro: {fileID: 0}
-  npcDialogueSucces: {fileID: 0}
+  DATA_REFERENCE: {fileID: 0}
+  ActionsPanelGO: {fileID: 0}
+  option1: {fileID: 0}
+  option2: {fileID: 0}
+  option3: {fileID: 0}
 --- !u!1 &3785106653995636994
 GameObject:
   m_ObjectHideFlags: 0
@@ -458,7 +462,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c307ea3a12f7c494e95bbaa891ce1aad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerVelocity: 2
+  playerVelocity: 1.2
 --- !u!1 &7646145148826092474
 GameObject:
   m_ObjectHideFlags: 0

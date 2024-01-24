@@ -8,6 +8,10 @@ public class NpcLogic : MonoBehaviour
     private NpcVisual _visuals;
     [SerializeField] float horizontalMovementSpeed = 3;
     [SerializeField] Vector2 moveHorizontal;
+    private bool isDead = false;
+    private Interactable _interactable;
+
+    
 
     // Start is called before the first frame update
     void Start()
@@ -16,10 +20,36 @@ public class NpcLogic : MonoBehaviour
         if (_visuals == null)
             _visuals = GetComponent<NpcVisual>();
         InvokeRepeating("WalkCycle", 1, 2);
+
+        
+        _interactable = gameObject.GetComponent<Interactable>();
     }
 
     public void WalkCycle()
     {
+        if (isDead)
+        {
+            
+            Destroy(_interactable);
+
+            int isWalkingRight = Random.Range(0, 2);
+            float randomSpeedMultiplier = Random.Range(1, 1.8f);
+
+            if (isWalkingRight == 0)
+            {
+                moveHorizontal = new Vector2(1 * horizontalMovementSpeed * randomSpeedMultiplier, 0);
+                FlipSprite(-gameObject.transform.localScale.x);
+            }
+            else
+            {
+                moveHorizontal = new Vector2(1 * horizontalMovementSpeed * -randomSpeedMultiplier, 0);
+                FlipSprite(gameObject.transform.localScale.x);
+            }
+
+            _visuals.StartWalking();
+            Destroy(gameObject, 20f);
+
+        }
         if (!isTalking)
         {
 
@@ -75,5 +105,11 @@ public class NpcLogic : MonoBehaviour
     }
 
     public void FlipSprite(float flipX) => gameObject.transform.localScale = new Vector3(flipX, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
+
+    public void KillNPC()
+    {
+        UIManager.Instance.HideActionPanel();
+        isDead = true;
+    }
 
 }
