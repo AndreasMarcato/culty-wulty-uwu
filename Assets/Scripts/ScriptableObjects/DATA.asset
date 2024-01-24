@@ -41,11 +41,13 @@ MonoBehaviour:
   - I miss my father.
   - 'I miss my husband. '
   personSadDialogueResponseYesData:
-  - Perhaps some new friends could help lighten the can recent events.
+  - Perhaps some new friends could help lighten these recent events.
+  - A miracle! Perhaps god hath chosen thou as the true leader.
   personSadDialogueResponseNoData:
   - Wait a moment now. Joining a group of friends sounded like a fine idea, but if
     there be any talk of cultish business, I'm not joining for I've got enough burdens
     to bear without adding mysterious gatherings to the mix.
+  - Witchcraft, take thy magic away from here. I have enough trouble on my own
   personNeutralDialogueOnInteractData:
   - Hark, stranger. A plague lurks in the walls around us. How dos   thou cope when
     death looms over us?
@@ -58,21 +60,20 @@ MonoBehaviour:
   - Greetings. Has thou heard? The neighboring town hath been stuck by illness. What
     shall we do when the wind brings the putrid miasma filled air to us? Will we
     all finally die?
-  - ' Salutations dear friend. Excuse my sadness but my children have     left me
-    and moved to faraway lands. I miss them dearly. '
+  - ' Salutations dear friend. Excuse my sadness but my children have left me and
+    moved to faraway lands. I miss them dearly. '
   personNeutralDialogueResponseYesData:
   - ' Well, now, that''s a pleasant turn of events. I reckon I wouldn''t mind joining
     a group of friends for a chat by a drink. A bit of camaraderie might sprinkle
     some warmth into these grey days of mine. '
+  - A miracle! Perhaps god hath chosen thou as the true leader.
+  personNeutralDialogueResponseNoData:
   - ' Hold on just a moment. Are we talking about a friendly gathering, or is there
     more to this fellowship than meets the eye? I''ve got no want for getting tangled
     up in any sort of peculiar business.  '
-  personNeutralDialogueResponseNoData:
-  - werwerwer
-  - ewrwerwer
+  - Witchcraft, take thy magic away from here. I have enough trouble on my own
   personBossDialogueOnInteractData:
   - Greetings child, How does the lord shine upon thee in these troubled times?
-  - ewrwerwerwerwerw
   personBossDialogueResponseYesData:
   - "By the heavens above! A miracle unfolds before mine eyes. The hand of the Almighty
     is evident in thy deeds, and I stand in awe. Surely, this manifestation of divine
@@ -84,34 +85,57 @@ MonoBehaviour:
     to invite damnation upon thy soul. The righteous anger of the Almighty burns
     within me. Repent, lest the flames of divine fury consume thee and thy misguided
     allegiance!"
-  personDialogueFailData:
-  - eqewewqeqw
-  - wqeewewq
-  personDialogueSucceedData:
-  - wqeeqwewq
-  - eewrewrew
+  personDialogueTalkingtoSADData:
+  - Condolences dear friend. Losing a life can be tough times. Perhaps joining our
+    comradeship would help thou fill the emptiness thou may feel.
+  - "I feel for you friend, it\u2019s a hard thing coping with the family leaving
+    our lives. Maybe talking can help thou through your troubled times."
+  - These tough times are best with a fellowship. With love from our savior and from
+    each other, tough times mean nothing to us.
+  - "I feel for you friend, it\u2019s a hard thing coping with the family leaving
+    our lives. Maybe talking can help thou through your troubled times."
+  - ' These tough times are best with a fellowship. With love from our savior and
+    from each other, tough times mean nothing to us. '
+  - Our gathering may offer just what thou may need. Join us and we may guide thou
+    through your toughest battles.
+  - I have spoken to the true God and Thou have maketh me a promise for a bountiful
+    harvest for those who worship the true one.
+  - "I feel for you friend, it\u2019s a hard thing coping with the family leaving
+    our lives. Maybe talking can help thou through your troubled times."
+  - Condolences dear friend. Losing a life can be tough times. Perhaps joining our
+    comradeship would help thou fill the emptiness thou may feel.
+  - "I feel for you friend, it\u2019s a hard thing coping with the family leaving
+    our lives. Maybe talking can help thou through your troubled times."
+  - ' My sympathies. Losing your life can be challenging at the moment. Perhaps joining
+    our comradeship would help thou find love elsewhere. '
+  personDialogueTalkingtoNEUTRALData:
+  - These tough times are best with a fellowship. With love from our savior and from
+    each other, tough times mean nothing to us.
+  - I have spoken to the true God and Thou have maketh me a promise for a bountiful
+    harvest for those who worship the true one.
+  - Thou are correct my friend. I have spoken with the true God and he showed me
+    the heathenous acts the false church commits. Join me so I may lead thou to the
+    right path.
+  - 'Not well my friend, but I have many to talk to. I get through these hard times
+    with love and laughter. Thou could join us one day if thou wanted to. '
+  - These tough times are a sign of ill to come. I suspect the cities church has
+    lead us down a dark path. I have spoken to the True One and he shall protect
+    us from all
+  - "I feel for you friend, it\u2019s a hard thing coping with the family leaving
+    our lives. Maybe talking can help thou through your troubled times."
+  personDialogueTalkingtoBOSSData:
+  - Your god is a false one. You follow an idol and spread the word of evil. I have
+    spoken with the true one and he has given me the task to spread they name.
+  - You follow only fame instead of the true god. You fill the minds of the people
+    with miasma spreadig the word of the plague not the true god.
+  - You use the peopl for your own profit, selling redemptions to anyone willing
+    to pay. Follow me, chosen of the real God to redeem yourself.
+  personDialogueMAGICData:
+  - '*You perform a small trick with cards*'
+  - '*You use some slight of hand to pull a Disaronno from behind their ears*'
+  - '*You pull a seemingly endless number of handkerchiefs from you mouth*'
+  - "*You sneakily pour some water on a nearby drunk \u201Craising them from the
+    dead\u201D *"
+  - '*You channel the power of your god and perform a true miracle, the symbol of
+    your God appears in their mind*'
   personHealthData: 0f000000f1050000b3a72f00
-  playerSadResponse:
-  - a
-  - b
-  - c
-  - d
-  - e
-  - f
-  - g
-  - h
-  - i
-  - j
-  playerNeutralResponse:
-  - 1
-  - 2
-  - 3
-  - 4
-  - 5
-  playerBossResponse:
-  - 
-  - 
-  playerMagicResponse:
-  - 
-  - 
-  - 
