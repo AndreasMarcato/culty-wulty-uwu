@@ -13,12 +13,17 @@ MonoBehaviour:
   m_Name: DATA
   m_EditorClassIdentifier: 
   personNameData:
-  - Bob
+  - Alburg
   - Margaret
-  - Jerry
-  - Bobby
-  - Pippin
-  - Edgar
+  - Eupraxia
+  - Gaudimia
+  - Ingigerd
+  - Lefchild
+  - Norwin
+  - Quiteria
+  - Soave
+  - Theodeberg
+  - Winrich
   personSadDialogueOnInteractData:
   - Fair day traveler. I am sorry if I seem down, but my closest friend and dearest
     drinking partner hath left this world. I do not know what to do with myself.
@@ -49,7 +54,7 @@ MonoBehaviour:
     to bear without adding mysterious gatherings to the mix.
   - Witchcraft, take thy magic away from here. I have enough trouble on my own
   personNeutralDialogueOnInteractData:
-  - Hark, stranger. A plague lurks in the walls around us. How dos   thou cope when
+  - Hark, stranger. A plague lurks in the walls around us. How dos  thou cope when
     death looms over us?
   - Salutations, kind stranger. How dost thou manage in these hungry days?
   - "Hail, kind stranger. Have thou heard the news that the church doesn\u2019t have
@@ -85,32 +90,36 @@ MonoBehaviour:
     to invite damnation upon thy soul. The righteous anger of the Almighty burns
     within me. Repent, lest the flames of divine fury consume thee and thy misguided
     allegiance!"
-  personDialogueTalkingtoSADData:
+  personDialogueFailData: []
+  personDialogueSucceedData: []
+  personHealthData: 0f000000f1050000b3a72f00
+  playerSadResponse:
   - Condolences dear friend. Losing a life can be tough times. Perhaps joining our
     comradeship would help thou fill the emptiness thou may feel.
-  - "I feel for you friend, it\u2019s a hard thing coping with the family leaving
-    our lives. Maybe talking can help thou through your troubled times."
-  - These tough times are best with a fellowship. With love from our savior and from
-    each other, tough times mean nothing to us.
-  - "I feel for you friend, it\u2019s a hard thing coping with the family leaving
-    our lives. Maybe talking can help thou through your troubled times."
-  - ' These tough times are best with a fellowship. With love from our savior and
-    from each other, tough times mean nothing to us. '
-  - Our gathering may offer just what thou may need. Join us and we may guide thou
-    through your toughest battles.
+  - Condolences dear friend. Losing a life can be tough times. Perhaps joining our
+    comradeship would help thou fill the emptiness thou may feel.
+  - 'Our city could not live without your contributions. Join our fellowship so we
+    can celebrate your accomplishments and with the help of our savior return your
+    workshop to its former glory. '
+  - Condolences dear friend. Losing a life can be tough times. Perhaps joining our
+    comradeship would help thou fill the emptiness thou may feel.
+  - Our crew hath a fair few who have gone through the same as thou has. If thou
+    mood is low, stop by and have a drink on us.
+  - 'Our city could not live without your contributions. Join our fellowship so we
+    can celebrate your accomplishments and with the help of our savior return your
+    workshop to its former glory. '
   - I have spoken to the true God and Thou have maketh me a promise for a bountiful
     harvest for those who worship the true one.
-  - "I feel for you friend, it\u2019s a hard thing coping with the family leaving
-    our lives. Maybe talking can help thou through your troubled times."
   - Condolences dear friend. Losing a life can be tough times. Perhaps joining our
     comradeship would help thou fill the emptiness thou may feel.
-  - "I feel for you friend, it\u2019s a hard thing coping with the family leaving
-    our lives. Maybe talking can help thou through your troubled times."
-  - ' My sympathies. Losing your life can be challenging at the moment. Perhaps joining
-    our comradeship would help thou find love elsewhere. '
-  personDialogueTalkingtoNEUTRALData:
-  - These tough times are best with a fellowship. With love from our savior and from
-    each other, tough times mean nothing to us.
+  - Condolences dear friend. Losing a life can be tough times. Perhaps joining our
+    comradeship would help thou fill the emptiness thou may feel.
+  - Condolences dear friend. Losing a life can be tough times. Perhaps joining our
+    comradeship would help thou fill the emptiness thou may feel.
+  - Condolences dear friend. Losing a life can be tough times. Perhaps joining our
+    comradeship would help thou fill the emptiness thou may feel.
+  playerNeutralResponse:
+  - With the faith of the True One I am protected from death and all adverseries.
   - I have spoken to the true God and Thou have maketh me a promise for a bountiful
     harvest for those who worship the true one.
   - Thou are correct my friend. I have spoken with the true God and he showed me
@@ -118,19 +127,16 @@ MonoBehaviour:
     right path.
   - 'Not well my friend, but I have many to talk to. I get through these hard times
     with love and laughter. Thou could join us one day if thou wanted to. '
-  - These tough times are a sign of ill to come. I suspect the cities church has
-    lead us down a dark path. I have spoken to the True One and he shall protect
-    us from all
-  - "I feel for you friend, it\u2019s a hard thing coping with the family leaving
-    our lives. Maybe talking can help thou through your troubled times."
-  personDialogueTalkingtoBOSSData:
-  - Your god is a false one. You follow an idol and spread the word of evil. I have
-    spoken with the true one and he has given me the task to spread they name.
-  - You follow only fame instead of the true god. You fill the minds of the people
-    with miasma spreadig the word of the plague not the true god.
-  - You use the peopl for your own profit, selling redemptions to anyone willing
-    to pay. Follow me, chosen of the real God to redeem yourself.
-  personDialogueMAGICData:
+  - Fear not for if you follow me and the word of the True One, They shall protect
+    us from the miasma.
+  - My sympathies. Losing your children can be challenging at the moment. Perhaps
+    joining our comradeship would help thou find love elsewhere.
+  playerBossResponse:
+  - You follow a false god and spread the poisonous words of the idol. If you follow
+    the True One you have a chance for redemption
+  - Your words spread miasma to the city. The True One has Begun punishing thos who
+    follow the false one.
+  playerMagicResponse:
   - '*You perform a small trick with cards*'
   - '*You use some slight of hand to pull a Disaronno from behind their ears*'
   - '*You pull a seemingly endless number of handkerchiefs from you mouth*'
@@ -138,4 +144,3 @@ MonoBehaviour:
     dead\u201D *"
   - '*You channel the power of your god and perform a true miracle, the symbol of
     your God appears in their mind*'
-  personHealthData: 0f000000f1050000b3a72f00

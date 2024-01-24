@@ -3809,7 +3809,7 @@ PrefabInstance:
     - target: {fileID: 9161727482664140966, guid: 312e7ea826de805439041b4485a3bb9d, type: 3}
       propertyPath: dreamPanel
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 317422719}
     - target: {fileID: 9161727482664140966, guid: 312e7ea826de805439041b4485a3bb9d, type: 3}
       propertyPath: transition
       value: 
