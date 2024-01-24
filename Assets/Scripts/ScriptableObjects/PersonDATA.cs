@@ -21,9 +21,10 @@ public class PersonDATA : ScriptableObject
     public string[] personBossDialogueResponseYesData;
     public string[] personBossDialogueResponseNoData;
 
-    public string[] personDialogueFailData;
-    public string[] personDialogueSucceedData;
-
+    public string[] personDialogueTalkingtoSADData;
+    public string[] personDialogueTalkingtoNEUTRALData;
+    public string[] personDialogueTalkingtoBOSSData;
+    public string[] personDialogueMAGICData;
 
     public int[] personHealthData;
 
