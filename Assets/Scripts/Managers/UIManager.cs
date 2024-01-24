@@ -20,9 +20,12 @@ public class UIManager : MonoBehaviour
     //player stuff
     [SerializeField] private PersonDATA DATA_REFERENCE;
     [SerializeField] private GameObject ActionsPanelGO;
+    [SerializeField] private GameObject AnswerPanelGO;
     [SerializeField] private TextMeshProUGUI option1;
     [SerializeField] private TextMeshProUGUI option2;
     [SerializeField] private TextMeshProUGUI option3;
+    private int goodPoint;
+    bool hasWon = false;
 
     private void Awake()
     {
@@ -60,7 +63,12 @@ public class UIManager : MonoBehaviour
         personHealthReference = personHealthReference - damage;
     }
     public void ShowActionPanel() => ActionsPanelGO.SetActive(true);
+    public void ShowAnswerPanel(bool text)
+    {
+        AnswerPanelGO.SetActive(true);
+    }
     public void HideActionPanel() => ActionsPanelGO.SetActive(false);
+    public void HideAnswerPanel() => AnswerPanelGO.SetActive(false);
     public void SetUpActionOptions(Person.PersonType personType, int index)
     {
         string s1 = "0";
@@ -95,14 +103,43 @@ public class UIManager : MonoBehaviour
         {
             option1.text = s1;
             option2.text = s2;
+            goodPoint = 0;
         }
         else
         {
             option1.text = s2;
             option2.text = s1;
+            goodPoint = 1;
         }
         
     }
 
+    public void CheckAnswer(bool isOption1)
+    {
+        hasWon = false;
+        if (isOption1)
+            if (goodPoint == 0)
+                hasWon = true;
+            else
+                hasWon = false;
+        else if (!isOption1)
+            if (goodPoint == 1)
+                hasWon = true;
+            else
+                hasWon = false;
+
+
+        ShowAnswerPanel(hasWon);
+    }
+    public void Magic()
+    {
+        GameManager.Instance.WinCheck(true);
+    }
+
+    public void EndDialogue() 
+    {
+        GameManager.Instance.WinCheck(hasWon);
+        GameManager.Instance.SwapActionMap();
+    }
 
 }

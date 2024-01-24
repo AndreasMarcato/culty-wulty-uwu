@@ -20,8 +20,8 @@ public class Mainmenu : MonoBehaviour
     }
     private IEnumerator LoadDream()
     {
-        yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene(2);
+        yield return new WaitForSeconds(3);
+        dreamPanel.SetActive(true);
     }
 
 

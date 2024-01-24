@@ -83,7 +83,7 @@ public class GameManager : MonoBehaviour
     }
  
 
-    private void SwapActionMap()
+    public void SwapActionMap()
     {
         if (_playerInput.actions.FindActionMap("PlayerInputOOC").enabled)
         {
@@ -95,5 +95,12 @@ public class GameManager : MonoBehaviour
             _playerInput.actions.FindActionMap("PlayerInputOOC").Enable();
             _playerInput.actions.FindActionMap("PlayerInputIC").Disable();
         }
+    }
+
+    public void WinCheck(bool isRightAnswer)
+    {
+        npcLogic.KillNPC();
+        if (!isRightAnswer)
+            failCount++;
     }
 }
