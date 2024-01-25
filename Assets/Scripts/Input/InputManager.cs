@@ -9,6 +9,7 @@ public class InputManager : MonoBehaviour
     private PlayerInput _playerInput;
     private Transform _playerTransform;
     private PlayerVisual _playerVisual;
+
     
     // Game Input
     private InputAction moveAction;
