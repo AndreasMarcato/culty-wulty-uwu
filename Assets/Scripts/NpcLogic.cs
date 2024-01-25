@@ -72,8 +72,8 @@ public class NpcLogic : MonoBehaviour
                         float randomSpeedMultiplier = Random.Range(1, 1.8f);
                         if (isWalkingRight == 0)
                         {
-                            moveHorizontal = new Vector2( 1 * horizontalMovementSpeed * randomSpeedMultiplier, 0);
                             FlipSprite(-gameObject.transform.localScale.x);
+                            moveHorizontal = new Vector2( 1 * horizontalMovementSpeed * randomSpeedMultiplier, 0);
                         }
                         else
                         {
