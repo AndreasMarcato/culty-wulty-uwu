@@ -11,10 +11,7 @@ public class GameManager : MonoBehaviour
     public List<Collider2D> _interactableList;
 
     //Player Inventory
-    private List<GameObject> inventory { get;  set; } = new List<GameObject>();
-    public List<GameObject> Inventory => inventory;
-    
-
+    [HideInInspector] public List<GameObject> inventory = new List<GameObject>();
 
     [SerializeField] private PlayerInput _playerInput;
 
@@ -50,11 +47,6 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.G))
-            inventory.RemoveAt(0);
-        if (Input.GetKeyDown(KeyCode.H))
-            Instantiate(inventory[1]);
-
         Debug.Log(inventory.Count);
 
         //Check Loss Condition
@@ -102,8 +94,10 @@ public class GameManager : MonoBehaviour
     {
         npcLogic.KillNPC();
         if (!isRightAnswer)
+        {
             failCount++;
-        Debug.Log(FailCount);
+            GameOverCheckAndStart();
+        }
     }
 
 
@@ -113,7 +107,8 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("GameOver");
             Spawner.Instance.currentNpcOnScreen = 0;
-            SceneHandleManager.Instance.LoadCityScene();
+            inventory.Clear();
+            SceneHandleManager.Instance.LoadGameOverScene();
         }
     }
 

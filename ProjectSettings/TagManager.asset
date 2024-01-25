@@ -9,6 +9,7 @@ TagManager:
   - PersonName
   - DialogueText
   - BoundingBox
+  - PlayerVisual
   layers:
   - Default
   - TransparentFX
