@@ -17,7 +17,7 @@ public class Endingmenu : MonoBehaviour
     private IEnumerator Ending()
     {
       
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(8);
         canvasThingy.SetActive(true);
         
         
