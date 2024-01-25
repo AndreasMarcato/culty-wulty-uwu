@@ -244,4 +244,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   personDATA: {fileID: 11400000, guid: 03333727be96ed24c8018f868bec8210, type: 2}
-  personType: 1
+  personType: 0

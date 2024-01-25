@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
+
 public class GameManager : MonoBehaviour
 {
     //Interactible trackers
@@ -30,6 +31,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject bossPrefab;
     [SerializeField] Transform churchSpawner;
 
+    
     public static GameManager Instance { get; private set; }
     private void Awake()
     {
