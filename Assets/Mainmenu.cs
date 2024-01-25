@@ -10,7 +10,7 @@ public class Mainmenu : MonoBehaviour
     public void PlayGame ()
     {
         Debug.Log("playtime");
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(0);
 
     }
 
