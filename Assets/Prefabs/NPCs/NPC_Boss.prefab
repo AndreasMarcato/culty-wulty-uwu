@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: b120e73efe353734686be173cd3dfccc, type: 3}
+    - target: {fileID: 3768129252118912623, guid: 51991641c19ee1640a3167e4f29ccd9b, type: 3}
+      propertyPath: personType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7744901857386880405, guid: 51991641c19ee1640a3167e4f29ccd9b, type: 3}
       propertyPath: m_Name
       value: NPC_Boss

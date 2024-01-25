@@ -8,7 +8,7 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager Instance { get; private set; }
     [SerializeField, Header("DialogueCanvas")] private GameObject sceneDialogue;
-    private GameObject currentNPC;
+    [HideInInspector] public GameObject currentNPC;
     private int personHealthReference;
     private Person person;
     [Header("TMP Text")]
@@ -32,7 +32,9 @@ public class UIManager : MonoBehaviour
     private string answerYesString;
     private string answerNoString;
     private string answerMagic;
-    
+
+
+    bool isBossMagic = false;
 
     private int goodPoint;
     bool hasWon = false;
@@ -80,6 +82,7 @@ public class UIManager : MonoBehaviour
                 answerNoString = DATA_REFERENCE.personNeutralDialogueResponseNoData[Random.Range(0, DATA_REFERENCE.personNeutralDialogueResponseNoData.Length)];
                 break;
             case (Person.PersonType.BOSS):
+                currentNPC.GetComponentInChildren<NpcVisual>().BossInteract();
                 answerYesString = DATA_REFERENCE.personBossDialogueResponseYesData[Random.Range(0, DATA_REFERENCE.personBossDialogueResponseYesData.Length)];
                 answerNoString = DATA_REFERENCE.personBossDialogueResponseNoData[Random.Range(0, DATA_REFERENCE.personBossDialogueResponseNoData.Length)];
                 break;
@@ -120,7 +123,7 @@ public class UIManager : MonoBehaviour
             case Person.PersonType.BOSS:
                 //VS SAD BOSS ACTIONS
                 s1 = DATA_REFERENCE.playerBossResponse[0];
-                s2 = DATA_REFERENCE.playerNeutralResponse[Random.Range(0, DATA_REFERENCE.personNeutralDialogueOnInteractData.Length)];
+                s2 = DATA_REFERENCE.playerBossResponse[1];
                 break;
         }
         RandomizerPosition(s1, s2);
@@ -163,15 +166,31 @@ public class UIManager : MonoBehaviour
         else
             answerText.text = answerNoString;
 
+        if (currentNPC.GetComponent<Person>().personType == Person.PersonType.BOSS)
+        {
+            hasWon = false;
+            answerText.text = answerNoString;
+            GameManager.Instance.failCount += 100;
+
+        }
+
         ShowAnswerPanel(hasWon);
     }
     
     public void Magic()
     {
+        isBossMagic = false;
+        if (currentNPC.GetComponent<Person>().personType == Person.PersonType.BOSS)
+        {
+            isBossMagic = true;
+        }
         _playerAnimator.SetTrigger("Magic");
         answerText.text = answerMagic;
         hasWon = true;
+        if (currentNPC.GetComponent<Person>().personType == Person.PersonType.BOSS)
+            GameManager.Instance.convertedPagans += 100;
         ShowAnswerPanel(hasWon);
+
     }
 
     public void EndDialogue() 

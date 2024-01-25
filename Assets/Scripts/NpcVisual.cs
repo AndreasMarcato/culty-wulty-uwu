@@ -15,4 +15,11 @@ public class NpcVisual : MonoBehaviour
 
     public void StartWalking() => _animator.SetTrigger("StartWalking");
     public void StopWalking() => _animator.SetTrigger("StopWalking");
+    public void BossInteract() => _animator.SetTrigger("Interact");
+    public void BossDefeat()
+    {
+        _animator.SetTrigger("Defeat");
+        GameManager.Instance.failCount += 50;
+
+    }
 }

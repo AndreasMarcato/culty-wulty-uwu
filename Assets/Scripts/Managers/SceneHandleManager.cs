@@ -22,7 +22,7 @@ public class SceneHandleManager : MonoBehaviour
 
     //Load and Unload Scenes
     public void LoadGameOverScene() => SceneManager.LoadSceneAsync(3);
-    
 
+    public void LoadWin() => SceneManager.LoadSceneAsync(1);
 
 }

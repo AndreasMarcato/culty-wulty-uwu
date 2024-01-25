@@ -21,8 +21,14 @@ public class GameManager : MonoBehaviour
 
     //player fail condition
     [HideInInspector] public int maxFailCount = 5;
-    private int failCount;
+    [HideInInspector] public int failCount;
     public int FailCount => failCount;
+
+    [SerializeField] public int convertedPagans;
+    bool isBossActive = false;
+    GameObject bossInstance;
+    [SerializeField] GameObject bossPrefab;
+    [SerializeField] Transform churchSpawner;
 
     public static GameManager Instance { get; private set; }
     private void Awake()
@@ -98,8 +104,22 @@ public class GameManager : MonoBehaviour
             failCount++;
             GameOverCheckAndStart();
         }
+        else
+        {
+            convertedPagans++;
+            BossCheck();
+        }
+
+        if (isRightAnswer && UIManager.Instance.currentNPC.GetComponent<Person>().personType == Person.PersonType.BOSS)
+            SceneHandleManager.Instance.LoadWin();
     }
 
+    private void BossCheck()
+    {
+        if (isBossActive = convertedPagans > 20 ? true : false)
+            if (bossInstance == null)
+                bossInstance = Instantiate(bossPrefab, churchSpawner.position, Quaternion.identity);
+    }
 
     public void GameOverCheckAndStart()
     {
@@ -107,6 +127,7 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("GameOver");
             Spawner.Instance.currentNpcOnScreen = 0;
+            convertedPagans = 0;
             inventory.Clear();
             SceneHandleManager.Instance.LoadGameOverScene();
         }

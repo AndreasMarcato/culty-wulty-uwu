@@ -10,19 +10,20 @@ public class NpcLogic : MonoBehaviour
     [SerializeField] Vector2 moveHorizontal;
     private bool isDead = false;
     private Interactable _interactable;
-
+    private Person _personReference;
     
 
     // Start is called before the first frame update
     void Start()
     {
+        _personReference = GetComponent<Person>();
         _visuals = gameObject.GetComponentInChildren<NpcVisual>();
         if (_visuals == null)
             _visuals = GetComponent<NpcVisual>();
-        InvokeRepeating("WalkCycle", 1, 2);
-
-        
         _interactable = gameObject.GetComponent<Interactable>();
+        if (_personReference.personType == Person.PersonType.BOSS)
+            return;
+        InvokeRepeating("WalkCycle", 1, 2);
     }
 
     public void WalkCycle()
