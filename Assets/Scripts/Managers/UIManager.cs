@@ -159,8 +159,8 @@ public class UIManager : MonoBehaviour
     public void Magic()
     {
         answerText.text = answerYesString;
-        GameManager.Instance.WinCheck(true);
-        GameManager.Instance.SwapActionMap();
+        hasWon = true;
+        ShowAnswerPanel(hasWon);
     }
 
     public void EndDialogue() 
