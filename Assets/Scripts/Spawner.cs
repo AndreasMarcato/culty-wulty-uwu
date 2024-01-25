@@ -4,12 +4,25 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
+    public static Spawner Instance { get; private set; }
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
+
     [Header("Lists of NPC Prefabs and Spawner Transforms")]
     [SerializeField] private List<GameObject> prefabsNPC = new List<GameObject>();
     [SerializeField] private List<Transform> prefabSpawnerPlace = new List<Transform>();
-    [Space]
+    [Space, Header("Values")]
     [SerializeField] private int maxNumberNPCOnScreen = 10;
-    [SerializeField] private int currentNpcOnScreen = 0;
+    [SerializeField] public int currentNpcOnScreen = 0;
     [SerializeField] private float spawnIntervalCheck = 5;
 
     private void Start()
