@@ -8,15 +8,15 @@ public class PlayerVisual : MonoBehaviour
 
 
     // Start is called before the first frame update
-      void Awake()
-     {
-          _animator = gameObject.GetComponent<Animator>();
-     }
+    void Awake()
+    {
+         _animator = gameObject.GetComponent<Animator>();
+    }
 
-      public void StartWalking() => _animator.SetTrigger("StartWalking");
-      public void StopWalking() => _animator.SetTrigger("StopWalking");
+    public void StartWalking() => _animator.SetTrigger("StartWalking");
+    public void StopWalking() => _animator.SetTrigger("StopWalking");
 
-
+    public void DoMagic() => _animator.SetTrigger("Magic");
 
 
 

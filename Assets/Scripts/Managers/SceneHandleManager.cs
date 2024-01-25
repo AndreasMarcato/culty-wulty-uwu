@@ -21,7 +21,7 @@ public class SceneHandleManager : MonoBehaviour
     }
 
     //Load and Unload Scenes
-    public void LoadCityScene() => SceneManager.LoadSceneAsync(1);
+    public void LoadGameOverScene() => SceneManager.LoadSceneAsync(1);
     
 
 

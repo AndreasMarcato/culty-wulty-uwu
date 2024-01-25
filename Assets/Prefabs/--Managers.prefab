@@ -216,7 +216,14 @@ MonoBehaviour:
   sceneDialogue: {fileID: 0}
   npcName: {fileID: 0}
   npcDialogueIntro: {fileID: 0}
-  npcDialogueSucces: {fileID: 0}
+  DATA_REFERENCE: {fileID: 0}
+  ActionsPanelGO: {fileID: 0}
+  AnswerPanelGO: {fileID: 0}
+  magicButton: {fileID: 0}
+  option1: {fileID: 0}
+  option2: {fileID: 0}
+  option3: {fileID: 0}
+  answerText: {fileID: 0}
 --- !u!1 &3785106653995636994
 GameObject:
   m_ObjectHideFlags: 0
@@ -269,6 +276,50 @@ MonoBehaviour:
   maxNumberNPCOnScreen: 5
   currentNpcOnScreen: 0
   spawnIntervalCheck: 5
+--- !u!1 &4709992800387169003
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2467226624896190471}
+  - component: {fileID: 7374176428002104186}
+  m_Layer: 0
+  m_Name: --Scene Handle Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2467226624896190471
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4709992800387169003}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1076.7848, y: 264.79764, z: 11.074394}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3807713059281282827}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7374176428002104186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4709992800387169003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5613b6d7b742d7e4d907e109813ee733, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5570247448393775128
 GameObject:
   m_ObjectHideFlags: 0
@@ -504,7 +555,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interactableList: []
+  inventory: []
   _playerInput: {fileID: 0}
+  maxFailCount: 5
 --- !u!1 &8204426960593050622
 GameObject:
   m_ObjectHideFlags: 0
@@ -540,5 +593,6 @@ Transform:
   - {fileID: 3707241592834506379}
   - {fileID: 5389439131999276003}
   - {fileID: 987990681629146797}
+  - {fileID: 2467226624896190471}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

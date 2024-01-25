@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class UIManager : MonoBehaviour
@@ -15,18 +16,22 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI npcDialogueIntro;
     //[SerializeField] private TextMeshProUGUI npcDialogueSucces;
 
-
+    Animator _playerAnimator;
 
     //player stuff
     [SerializeField] private PersonDATA DATA_REFERENCE;
     [SerializeField] private GameObject ActionsPanelGO;
     [SerializeField] private GameObject AnswerPanelGO;
+
+    [SerializeField] public Button magicButton;
+
     [SerializeField] private TextMeshProUGUI option1;
     [SerializeField] private TextMeshProUGUI option2;
     [SerializeField] private TextMeshProUGUI option3;
     [SerializeField] private TextMeshProUGUI answerText;
     private string answerYesString;
     private string answerNoString;
+    private string answerMagic;
     
 
     private int goodPoint;
@@ -46,7 +51,10 @@ public class UIManager : MonoBehaviour
             sceneDialogue.SetActive(false);
         }
     }
-
+    private void Start()
+    {
+        _playerAnimator = GameObject.FindGameObjectWithTag("PlayerVisual").GetComponent<Animator>();
+    }
 
     public void SetUp(GameObject npcData, Person.PersonType type, int storedIndex)
     {
@@ -76,6 +84,7 @@ public class UIManager : MonoBehaviour
                 answerNoString = DATA_REFERENCE.personBossDialogueResponseNoData[Random.Range(0, DATA_REFERENCE.personBossDialogueResponseNoData.Length)];
                 break;
         }
+        answerMagic = DATA_REFERENCE.playerMagicResponse[Random.Range(0, DATA_REFERENCE.playerMagicResponse.Length)];
 
     }
 
@@ -156,9 +165,11 @@ public class UIManager : MonoBehaviour
 
         ShowAnswerPanel(hasWon);
     }
+    
     public void Magic()
     {
-        answerText.text = answerYesString;
+        _playerAnimator.SetTrigger("Magic");
+        answerText.text = answerMagic;
         hasWon = true;
         ShowAnswerPanel(hasWon);
     }
@@ -178,6 +189,3 @@ public class UIManager : MonoBehaviour
 
 
 }
-
-
-

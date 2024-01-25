@@ -40,10 +40,16 @@ public class Interactable : MonoBehaviour, IEInteractable
         {
             case InteractableType.OBJECT:
                 Debug.Log("Object type");
-                GameManager.Instance.Inventory.Add(gameObject);
+                GameManager.Instance.inventory.Add(gameObject);
                 gameObject.SetActive(false);
                 return;
             case InteractableType.PERSON:
+
+                if (GameManager.Instance.inventory.Count == 0)
+                    UIManager.Instance.magicButton.interactable = false;
+                else
+                    UIManager.Instance.magicButton.interactable = true;
+
                 GameManager.Instance.HandlePersonInteractionScene(gameObject);
                 Person reference = this.gameObject.GetComponent<Person>();
                 UIManager.Instance.SetUp(this.gameObject, reference.personType, reference.StoredIndex);
