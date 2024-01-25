@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     NpcLogic npcLogic;
 
     //player fail condition
+    [HideInInspector] public int maxFailCount = 5;
     private int failCount;
     public int FailCount => failCount;
 
@@ -102,5 +103,18 @@ public class GameManager : MonoBehaviour
         npcLogic.KillNPC();
         if (!isRightAnswer)
             failCount++;
+        Debug.Log(FailCount);
     }
+
+
+    public void GameOverCheckAndStart()
+    {
+        if (failCount >= maxFailCount)
+        {
+            Debug.Log("GameOver");
+            Spawner.Instance.currentNpcOnScreen = 0;
+            SceneHandleManager.Instance.LoadCityScene();
+        }
+    }
+
 }

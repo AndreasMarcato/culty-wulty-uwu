@@ -24,6 +24,11 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI option1;
     [SerializeField] private TextMeshProUGUI option2;
     [SerializeField] private TextMeshProUGUI option3;
+    [SerializeField] private TextMeshProUGUI answerText;
+    private string answerYesString;
+    private string answerNoString;
+    
+
     private int goodPoint;
     bool hasWon = false;
 
@@ -55,6 +60,22 @@ public class UIManager : MonoBehaviour
         npcDialogueIntro.text = person.PersonDialogueOnInteract;
         SetUpActionOptions(type, storedIndex);
         sceneDialogue.SetActive(true);
+
+        switch (type)
+        {
+            case (Person.PersonType.SAD):
+                answerYesString = DATA_REFERENCE.personSadDialogueResponseYesData[Random.Range(0, DATA_REFERENCE.personSadDialogueResponseYesData.Length)];
+                answerNoString = DATA_REFERENCE.personSadDialogueResponseNoData[Random.Range(0, DATA_REFERENCE.personSadDialogueResponseNoData.Length)];
+                break;
+            case (Person.PersonType.NEUTRAL):
+                answerYesString = DATA_REFERENCE.personNeutralDialogueResponseYesData[Random.Range(0, DATA_REFERENCE.personNeutralDialogueResponseYesData.Length)];
+                answerNoString = DATA_REFERENCE.personNeutralDialogueResponseNoData[Random.Range(0, DATA_REFERENCE.personNeutralDialogueResponseNoData.Length)];
+                break;
+            case (Person.PersonType.BOSS):
+                answerYesString = DATA_REFERENCE.personBossDialogueResponseYesData[Random.Range(0, DATA_REFERENCE.personBossDialogueResponseYesData.Length)];
+                answerNoString = DATA_REFERENCE.personBossDialogueResponseNoData[Random.Range(0, DATA_REFERENCE.personBossDialogueResponseNoData.Length)];
+                break;
+        }
 
     }
 
@@ -128,12 +149,18 @@ public class UIManager : MonoBehaviour
             else
                 hasWon = false;
 
+        if (hasWon)
+            answerText.text = answerYesString;
+        else
+            answerText.text = answerNoString;
 
         ShowAnswerPanel(hasWon);
     }
     public void Magic()
     {
+        answerText.text = answerYesString;
         GameManager.Instance.WinCheck(true);
+        GameManager.Instance.SwapActionMap();
     }
 
     public void EndDialogue() 
@@ -142,4 +169,15 @@ public class UIManager : MonoBehaviour
         GameManager.Instance.SwapActionMap();
     }
 
+
+
+    public void UpdateUI()
+    {
+        Debug.Log("BOB");
+    }
+
+
 }
+
+
+

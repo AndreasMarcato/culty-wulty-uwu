@@ -108,6 +108,7 @@ public class NpcLogic : MonoBehaviour
 
     public void KillNPC()
     {
+        Spawner.Instance.currentNpcOnScreen--;
         UIManager.Instance.HideActionPanel();
         isDead = true;
     }
