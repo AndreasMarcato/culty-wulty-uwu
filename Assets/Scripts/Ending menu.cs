@@ -10,7 +10,10 @@ public class Endingmenu : MonoBehaviour
     {
         StartCoroutine(Ending());
     }
- 
+    private void Start()
+    {
+        END();
+    }
     private IEnumerator Ending()
     {
       
