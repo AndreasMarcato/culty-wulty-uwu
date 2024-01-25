@@ -5,8 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Endingmenu : MonoBehaviour
 {
-
-    CanvasGroup canvasGroup;
+    [SerializeField] private GameObject canvasThingy;
     public void END()
     {
         StartCoroutine(Ending());
@@ -15,9 +14,8 @@ public class Endingmenu : MonoBehaviour
     private IEnumerator Ending()
     {
       
-        yield return new WaitForSeconds(2);
-        canvasGroup.alpha = 0;
-        canvasGroup.interactable = false;
+        yield return new WaitForSeconds(3);
+        canvasThingy.SetActive(true);
         
         
 
