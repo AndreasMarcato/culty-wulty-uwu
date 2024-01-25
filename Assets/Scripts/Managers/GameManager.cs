@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject bossPrefab;
     [SerializeField] Transform churchSpawner;
 
-    
+    [HideInInspector] public int maxPagans = 20;
     public static GameManager Instance { get; private set; }
     private void Awake()
     {
@@ -118,7 +118,8 @@ public class GameManager : MonoBehaviour
 
     private void BossCheck()
     {
-        if (isBossActive = convertedPagans > 20 ? true : false)
+        UIManager.Instance.UpdateUI();
+        if (isBossActive = convertedPagans > maxPagans ? true : false)
             if (bossInstance == null)
                 bossInstance = Instantiate(bossPrefab, churchSpawner.position, Quaternion.identity);
     }

@@ -200,10 +200,10 @@ public class UIManager : MonoBehaviour
     }
 
 
-
+    [SerializeField] TextMeshProUGUI counter;
     public void UpdateUI()
     {
-        Debug.Log("BOB");
+        counter.text = GameManager.Instance.convertedPagans.ToString() + "/" + GameManager.Instance.maxPagans.ToString();
     }
 
 
