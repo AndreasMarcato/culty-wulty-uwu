@@ -252,7 +252,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Isabella @izmaost
+  m_text: Isabella Mosteller @izmaost
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 785ba1fdd97778846b7874ec9d4d589e, type: 2}
   m_sharedMaterial: {fileID: -8868866111805535792, guid: 785ba1fdd97778846b7874ec9d4d589e, type: 2}
@@ -2310,7 +2310,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1.9739, y: 3.0875244}
+  m_AnchoredPosition: {x: 1.973877, y: 3.0875244}
   m_SizeDelta: {x: 157.3252, y: 6.175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &814173340
@@ -2939,8 +2939,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 581, y: -241}
-  m_SizeDelta: {x: 791.3978, y: 50.0291}
+  m_AnchoredPosition: {x: 581, y: -245.2}
+  m_SizeDelta: {x: 791.4, y: 58.438}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1172255352
 MonoBehaviour:
@@ -2962,7 +2962,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Andreas
+  m_text: Andreas Marcato @venxfortesque
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 785ba1fdd97778846b7874ec9d4d589e, type: 2}
   m_sharedMaterial: {fileID: -8868866111805535792, guid: 785ba1fdd97778846b7874ec9d4d589e, type: 2}
@@ -3973,8 +3973,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 581, y: -11}
-  m_SizeDelta: {x: 791.3978, y: 50.0291}
+  m_AnchoredPosition: {x: 540.5427, y: -8}
+  m_SizeDelta: {x: 710.4833, y: 59.6618}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1603754211
 MonoBehaviour:
@@ -3996,7 +3996,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Martin
+  m_text: Martin Ivarsson @Hypexboi
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 785ba1fdd97778846b7874ec9d4d589e, type: 2}
   m_sharedMaterial: {fileID: -8868866111805535792, guid: 785ba1fdd97778846b7874ec9d4d589e, type: 2}
@@ -4853,7 +4853,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -371, y: -238}
+  m_AnchoredPosition: {x: -371, y: -255}
   m_SizeDelta: {x: 791.4, y: 72.847}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1913658081
