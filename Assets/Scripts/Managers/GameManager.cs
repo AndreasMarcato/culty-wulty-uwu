@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject bossPrefab;
     [SerializeField] Transform churchSpawner;
 
-    [HideInInspector] public int maxPagans = 20;
+    [HideInInspector] public int maxPagans = 19;
     public static GameManager Instance { get; private set; }
     private void Awake()
     {
