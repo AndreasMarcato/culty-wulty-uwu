@@ -178,12 +178,12 @@ TextureImporter:
       name: SADwoman1walk_0
       rect:
         serializedVersion: 2
-        x: 6
+        x: 0
         y: 0
-        width: 20
-        height: 40
+        width: 32
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -199,12 +199,12 @@ TextureImporter:
       name: SADwoman1walk_1
       rect:
         serializedVersion: 2
-        x: 38
+        x: 32
         y: 0
-        width: 22
-        height: 41
+        width: 32
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -220,12 +220,12 @@ TextureImporter:
       name: SADwoman1walk_2
       rect:
         serializedVersion: 2
-        x: 70
+        x: 64
         y: 0
-        width: 19
-        height: 41
+        width: 32
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -241,12 +241,12 @@ TextureImporter:
       name: SADwoman1walk_3
       rect:
         serializedVersion: 2
-        x: 102
+        x: 96
         y: 0
-        width: 19
-        height: 40
+        width: 32
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -262,12 +262,12 @@ TextureImporter:
       name: SADwoman1walk_4
       rect:
         serializedVersion: 2
-        x: 134
+        x: 128
         y: 0
-        width: 19
-        height: 41
+        width: 32
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -283,12 +283,12 @@ TextureImporter:
       name: SADwoman1walk_5
       rect:
         serializedVersion: 2
-        x: 166
+        x: 160
         y: 0
-        width: 19
-        height: 43
+        width: 32
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -304,12 +304,12 @@ TextureImporter:
       name: SADwoman1walk_6
       rect:
         serializedVersion: 2
-        x: 197
+        x: 192
         y: 0
-        width: 20
-        height: 41
+        width: 32
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -325,12 +325,12 @@ TextureImporter:
       name: SADwoman1walk_7
       rect:
         serializedVersion: 2
-        x: 229
+        x: 224
         y: 0
-        width: 20
-        height: 41
+        width: 32
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -346,12 +346,12 @@ TextureImporter:
       name: SADwoman1walk_8
       rect:
         serializedVersion: 2
-        x: 262
+        x: 256
         y: 0
-        width: 22
-        height: 42
+        width: 32
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -367,12 +367,12 @@ TextureImporter:
       name: SADwoman1walk_9
       rect:
         serializedVersion: 2
-        x: 294
+        x: 288
         y: 0
-        width: 22
-        height: 42
+        width: 32
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

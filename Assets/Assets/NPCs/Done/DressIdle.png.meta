@@ -178,12 +178,12 @@ TextureImporter:
       name: DressIdle_1
       rect:
         serializedVersion: 2
-        x: 37
+        x: 32
         y: 0
-        width: 21
-        height: 42
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 32
+        height: 45
+      alignment: 9
+      pivot: {x: 0.45677507, y: 0.49658474}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -199,12 +199,12 @@ TextureImporter:
       name: DressIdle_0
       rect:
         serializedVersion: 2
-        x: 5
+        x: 0
         y: 0
-        width: 21
-        height: 44
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 32
+        height: 45
+      alignment: 9
+      pivot: {x: 0.46477973, y: 0.49772316}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

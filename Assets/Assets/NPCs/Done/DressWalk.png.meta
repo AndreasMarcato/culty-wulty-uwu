@@ -178,12 +178,12 @@ TextureImporter:
       name: DressWalk_0
       rect:
         serializedVersion: 2
-        x: 4
+        x: 0
         y: 0
-        width: 21
-        height: 44
+        width: 32
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -199,12 +199,12 @@ TextureImporter:
       name: DressWalk_1
       rect:
         serializedVersion: 2
-        x: 36
+        x: 32
         y: 0
-        width: 21
-        height: 42
+        width: 32
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -220,12 +220,12 @@ TextureImporter:
       name: DressWalk_2
       rect:
         serializedVersion: 2
-        x: 68
+        x: 64
         y: 0
-        width: 21
-        height: 41
+        width: 32
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -241,12 +241,12 @@ TextureImporter:
       name: DressWalk_3
       rect:
         serializedVersion: 2
-        x: 100
+        x: 96
         y: 0
-        width: 21
-        height: 42
+        width: 32
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -262,12 +262,12 @@ TextureImporter:
       name: DressWalk_4
       rect:
         serializedVersion: 2
-        x: 132
+        x: 128
         y: 0
-        width: 21
-        height: 43
+        width: 32
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -283,12 +283,12 @@ TextureImporter:
       name: DressWalk_5
       rect:
         serializedVersion: 2
-        x: 164
+        x: 160
         y: 0
-        width: 21
-        height: 44
+        width: 32
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -317,6 +317,7 @@ TextureImporter:
       DressWalk_3: -570230749
       DressWalk_4: -1869098551
       DressWalk_5: 956599429
+      DressWalk_6: -574411513
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

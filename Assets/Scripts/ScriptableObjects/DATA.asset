@@ -47,12 +47,10 @@ MonoBehaviour:
   - 'I miss my husband. '
   personSadDialogueResponseYesData:
   - Perhaps some new friends could help lighten these recent events.
-  - A miracle! Perhaps god hath chosen thou as the true leader.
   personSadDialogueResponseNoData:
   - Wait a moment now. Joining a group of friends sounded like a fine idea, but if
     there be any talk of cultish business, I'm not joining for I've got enough burdens
     to bear without adding mysterious gatherings to the mix.
-  - Witchcraft, take thy magic away from here. I have enough trouble on my own
   personNeutralDialogueOnInteractData:
   - Hark, stranger. A plague lurks in the walls around us. How dos  thou cope when
     death looms over us?
@@ -71,12 +69,10 @@ MonoBehaviour:
   - ' Well, now, that''s a pleasant turn of events. I reckon I wouldn''t mind joining
     a group of friends for a chat by a drink. A bit of camaraderie might sprinkle
     some warmth into these grey days of mine. '
-  - A miracle! Perhaps god hath chosen thou as the true leader.
   personNeutralDialogueResponseNoData:
   - ' Hold on just a moment. Are we talking about a friendly gathering, or is there
     more to this fellowship than meets the eye? I''ve got no want for getting tangled
     up in any sort of peculiar business.  '
-  - Witchcraft, take thy magic away from here. I have enough trouble on my own
   personBossDialogueOnInteractData:
   - Greetings child, How does the lord shine upon thee in these troubled times?
   personBossDialogueResponseYesData:
